@@ -200,16 +200,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         pricing_plans_plan3_btn: "Бесплатная консультация",
 
                         koreanasha_services_subtitle: "Услуги",
-                        koreanasha_services_title: "유학의 모든 순간,<br>Koreanasha가 <span class=\"text-blue\">완벽하게 함께</span>합니다.",
-                        koreanasha_services_description: "유학 준비의 시작부터 목표를 이루는 순간까지,<br>Koreanasha가 든든히 곁을 지킵니다.",
-
-                        koreanasha_services_section1_title: "당신만을 위한 맞춤형 대학 & 어학당 추천",
-                        koreanasha_services_section1_description: "학생의 역량과 목표에 완벽히 부합하는 최적의 대학과 어학당을 제안합니다. 1:1 개별 상담으로 장학금 프로그램까지 꼼꼼히 안내하며, 입학 서류 준비부터 대학과 소통하는 것까지 모든 과정을 책임집니다.",
-                        koreanasha_services_section2_title: "합격 후에도 걱정 없이, 정착까지 완벽 지원",
-                        koreanasha_services_section2_description: "비자 발급, 외국인등록증 신청, 수업 등록 등 유학생활 정착의 모든 과정을 세심히 지원합니다. 새로운 환경에서도 안정적으로 시작할 수 있도록 필요한 모든 것을 함께합니다.",
-                        koreanasha_services_section3_title: "함께라서 더 강한 유학 커뮤니티",
-                        koreanasha_services_section3_description: "합격자 커뮤니티를 통해 정보를 나누고 새로운 인맥을 쌓을 기회를 제공합니다. 숙소 탐색, 생활 정보, 네트워킹까지 한 곳에서 해결하며, 유학생활의 모든 순간을 든든히 지원합니다.",
-
+                        koreanasha_services_title: "Каждый этап вашего обучения за границей<br>с Koreanasha — <span class=\"text-blue\">безупречное сопровождение</span>.",
+                        koreanasha_services_description: "С момента подготовки к обучению до достижения вашей цели,<br>Koreanasha всегда рядом с вами.",
+                                            
+                        koreanasha_services_section1_title: "Индивидуальный подбор университета и языковой школы",
+                        koreanasha_services_section1_description: "Мы подберем идеальный университет и языковую школу в соответствии с вашими целями и уровнем подготовки. Персональные консультации и подробная информация о стипендиальных программах. Полное сопровождение — от подготовки документов до общения с университетом.",
+                                            
+                        koreanasha_services_section2_title: "Полная поддержка даже после зачисления",
+                        koreanasha_services_section2_description: "Оформление визы, регистрация иностранца, запись на занятия — мы поможем вам на каждом этапе адаптации в новой стране. Все, что вам нужно для комфортного старта, будет под нашим контролем.",
+                                            
+                        koreanasha_services_section3_title: "Сильное сообщество студентов",
+                        koreanasha_services_section3_description: "Присоединяйтесь к сообществу успешных студентов! Обмен опытом, поиск жилья, жизненные советы и нетворкинг — все в одном месте, чтобы сделать вашу студенческую жизнь в Корее еще проще и комфортнее.",
                         reviews_subtitle: "Отзывы",
                         reviews_title: "“С Корея Наша<br><span class=\"text-blue\">я осуществил свою мечту».</span>”",
 
