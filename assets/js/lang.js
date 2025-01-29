@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         header_btn: "무료 상담받기",
 
                         banner_title: "한국 유학 쉽습니다!",
-                        banner_description: "당신의 꿈을 현실로 만들어 드립니다.<br>한국 유학의 첫걸음, 무료 상담으로 시작하세요!",
+                        banner_description: "당신의 꿈을 현실로 만들어 드립니다.\n한국 유학의 첫걸음, 무료 상담으로 시작하세요!",
                         banner_btn: "무료 상담받기",
                     }
                 },
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         header_btn: "Бесплатная консультация",
                         
                         banner_title: "Учеба в Корее - это просто!",
-                        banner_description: "Поможем воплотить ваши мечты в реальность.<br>Начните свой первый шаг к мечте с бесплатной консультации!",
+                        banner_description: "Поможем воплотить ваши мечты в реальность.\nНачните свой первый шаг к мечте с бесплатной консультации!",
                         banner_btn: "Бесплатная консультация",
                     }
                 }
