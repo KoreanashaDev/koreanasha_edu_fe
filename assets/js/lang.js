@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .use(i18nextBrowserLanguageDetector) // 언어 자동 감지
         .init({
             lng: localStorage.getItem("lang") || "ru", // 저장된 언어 가져오기
-            fallbackLng: "ko", // 기본 언어 설정
+            fallbackLng: "ru", // 기본 언어 설정
             debug: true, // 디버깅 모드 활성화
             resources: {
                 ko: {
