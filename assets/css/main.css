@@ -2022,6 +2022,9 @@ textarea:focus::placeholder {
 .container {
   padding-right: 15px;
   padding-left: 15px;
+}
+
+section .container {
   overflow: hidden;
 }
 
