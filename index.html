@@ -20,9 +20,7 @@
     <link rel="stylesheet" href="assets/css/meanmenu.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <script src="https://unpkg.com/i18next/i18next.js"></script>
-    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
-    <script src="assets/js/lang.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
 <body>
@@ -71,18 +69,17 @@
                                 </ul>
                             </nav>
                             <div class="dropdown">
-                                <button class="dropdown-toggle" style="color: #80839E;">
-                                    <i class="fa-regular fa-globe"></i>
-                                </button>
+                                <button class="dropdown-toggle" style="color: #80839E;" id="lang_flag"></button>
                                 <ul class="dropdown-menu">
-                                    <li onclick="changeLanguage('ru')">🇷🇺 Русский</li>
-                                    <li onclick="changeLanguage('ko')">🇰🇷 한국어</li>
+                                    <li data-lang="ru" onclick="changeLanguage('ru')">🇷🇺 Русский</li>
+                                    <li data-lang="ko" onclick="changeLanguage('ko')">🇰🇷 한국어</li>
                                 </ul>
                             </div>
 
                             <div class="header-btn only-pc">
-                                <a href="#" class="header-btn theme-btn theme-btn-medium btn-blue text-white">
-                                    <span id="header_btn">무료 상담받기</span>
+                                <a href="javascript:new bootstrap.Modal(document.getElementById('applyModal')).show();"
+                                    class="header-btn theme-btn theme-btn-medium btn-blue text-white">
+                                    <span id="header_btn"></span>
                                     <img src="assets/img/icon/arrow-right.png" alt="apply_btn" width="15"
                                         class="ml-20"></a>
                             </div>
@@ -112,7 +109,7 @@
                                 <div class="section-area">
                                     <h2 class="text-white text-shadow mb-3" id="banner_title"></h2>
                                     <p class="lead text-white text-shadow mb-5" id="banner_description"></p>
-                                    <a href="#"
+                                    <a href="javascript:new bootstrap.Modal(document.getElementById('applyModal')).show();"
                                         class="theme-btn theme-btn-big btn btn-primary btn-lg btn-blue text-white">
                                         <span id="banner_btn"></span>
                                         <img src="assets/img/icon/arrow-right.png" alt="apply_btn" width="15"
@@ -131,14 +128,15 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-8 col-lg-8 col-md-10">
-                        <div class="section-area mb-55 section-area-top text-center">
+                        <div class="section-area mb-55 section-area-top text-center" data-aos="fade-down"
+                            data-aos-duration="1000">
                             <p class="mb-4" id="about_us_subtitle"></p>
                             <h2 class="mb-4" id="about_us_title"></h2>
                             <p class="lead" id="about_us_description"></p>
                         </div>
                     </div>
                 </div>
-                <div class="row align-items-center">
+                <div class="row align-items-center" data-aos="fade-right" data-aos-duration="1000">
                     <div class="col-xl-6 col-lg-6 position-relative">
                         <div class="about-img mb-50">
                             <img src="assets/img/p1.png" alt="">
@@ -156,7 +154,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row align-items-center">
+                <div class="row align-items-center" data-aos="fade-left" data-aos-duration="1000">
                     <div class="col-xl-6 col-lg-6 order-1 order-lg-2">
                         <!-- 첫 번째 컬럼 (이미지) -->
                         <div class="about-img mb-50">
@@ -176,7 +174,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row align-items-center">
+                <div class="row align-items-center" data-aos="fade-right" data-aos-duration="1000">
                     <div class="col-xl-6 col-lg-6 position-relative">
                         <div class="about-img mb-50">
                             <img src="assets/img/p3.png" alt="">
@@ -202,7 +200,7 @@
         <!-- why-koreanasha area start -->
         <section class="pt-100 pb-100 bg-gray" id="why-koreanasha">
             <div class="container">
-                <div class="row">
+                <div class="row" data-aos="fade-down" data-aos-duration="1000">
                     <div class="col-12">
                         <div class="section-area-6 text-center mb-80">
                             <h2 class="mb-5" id="why_koreanasha_title"></h2>
@@ -210,7 +208,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-12">
+                    <div class="col-xl-4 col-lg-4 col-md-12" data-aos="fade-right" data-aos-duration="1000">
                         <div class="h2_blog-item mb-30">
                             <div class="h2_blog-content">
                                 <div class="mb-3">
@@ -221,7 +219,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-12">
+                    <div class="col-xl-4 col-lg-4 col-md-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                         <div class="h2_blog-item mb-30">
                             <div class="h2_blog-content">
                                 <div class="mb-3">
@@ -232,7 +230,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-12">
+                    <div class="col-xl-4 col-lg-4 col-md-12" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
                         <div class="h2_blog-item mb-30">
                             <div class="h2_blog-content">
                                 <div class="mb-3">
@@ -251,7 +249,7 @@
         <!-- korean-universities area start -->
         <section class="pt-100 pb-90" id="korean-universities">
             <div class="container">
-                <div class="row">
+                <div class="row" data-aos="fade-down" data-aos-duration="1000">
                     <div class="col-12">
                         <div class="section-area-6 text-center mb-80" id="korean_universities_title"></div>
                     </div>
@@ -312,7 +310,7 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-8 col-lg-8 col-md-10">
-                        <div class="section-area mb-55 section-area-top text-center">
+                        <div class="section-area mb-55 section-area-top text-center" data-aos="fade-down" data-aos-duration="1000">
                             <p class="mb-4" id="pricing_plans_subtitle"></p>
                             <h2 class="mb-4" id="pricing_plans_title"></h2>
                             <p class="lead" id="pricing_plans_description"></p>
@@ -321,7 +319,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-12">
+                    <div class="col-xl-4 col-lg-4 col-md-12" data-aos="fade-right" data-aos-duration="1000">
                         <div class="h2_price-item mb-30">
                             <div class="tag-discount background_blue">
                                 <div id="experiment-premium-installment-discount-rate" class="text-block-4">20%<br>OFF
@@ -329,6 +327,7 @@
                             </div>
                             <div class="h2_price-item-title">
                                 <h5 id="pricing_plans_plan1_title"></h5>
+                                <p id="pricing_plans_plan1_subtitle"></p>
                             </div>
                             <div class="h2_price-amount mb-4">
                                 <div class="text-end">
@@ -352,13 +351,14 @@
                                 <span id="pricing_plans_plan1_description3"></span>
                             </div>
 
-                            <div class="header-btn theme-btn-medium btn-blue text-white text-center"
-                                style="font-weight: 700; cursor: pointer;">
+                            <div class="header-btn theme-btn-medium theme-btn d-flex justify-content-center btn-blue text-white text-center"
+                                style="font-weight: 700; cursor: pointer;"
+                                onclick="javascript:new bootstrap.Modal(document.getElementById('applyModal')).show();">
                                 <span id="pricing_plans_plan1_btn"></span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-12">
+                    <div class="col-xl-4 col-lg-4 col-md-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                         <div class="h2_price-item h2_price-item-highlight mb-30">
                             <div class="tag-discount">
                                 <div id="experiment-plus-installment-discount-rate" class="text-block-4">15%<br>OFF
@@ -367,6 +367,7 @@
                             <span class="best-plan-btn mb-3">BEST</span>
                             <div class="h2_price-item-title">
                                 <h5 class="mt-3" id="pricing_plans_plan2_title"></h5>
+                                <p id="pricing_plans_plan2_subtitle"></p>
                             </div>
                             <div class="h2_price-amount">
                                 <div class="text-end">
@@ -418,13 +419,14 @@
                                 <span id="pricing_plans_plan2_description10"></span>
                             </div>
 
-                            <div class="header-btn theme-btn-medium btn-blue text-white text-center"
-                                style="font-weight: 700; cursor: pointer;">
+                            <div class="header-btn theme-btn-medium theme-btn d-flex justify-content-center btn-blue text-white text-center"
+                                style="font-weight: 700; cursor: pointer;"
+                                onclick="javascript:new bootstrap.Modal(document.getElementById('applyModal')).show();">
                                 <span id="pricing_plans_plan2_btn"></span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-12">
+                    <div class="col-xl-4 col-lg-4 col-md-12" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
                         <div class="h2_price-item mb-30">
                             <div class="tag-discount background_blue">
                                 <div id="experiment-premium-installment-discount-rate" class="text-block-4">21%<br>OFF
@@ -433,6 +435,7 @@
                             <span class="max-get-off-btn mb-3" id="pricing_plans_plan3_subtitle"></span>
                             <div class="h2_price-item-title">
                                 <h5 class="mt-3" id="pricing_plans_plan3_title"></h5>
+                                <p id="pricing_plans_plan3_description"></p>
                             </div>
                             <div class="h2_price-amount">
                                 <div class="text-end">
@@ -476,8 +479,9 @@
                                 <span id="pricing_plans_plan3_description8"></span>
                             </div>
 
-                            <div class="header-btn theme-btn-medium btn-blue text-white text-center"
-                                style="font-weight: 700; cursor: pointer;">
+                            <div class="header-btn theme-btn-medium theme-btn d-flex justify-content-center btn-blue text-white text-center"
+                                style="font-weight: 700; cursor: pointer;"
+                                onclick="javascript:new bootstrap.Modal(document.getElementById('applyModal')).show();">
                                 <span id="pricing_plans_plan3_btn"></span>
                             </div>
                         </div>
@@ -490,7 +494,7 @@
         <!-- koreanasha-services area start -->
         <section class="about-area pt-100 pb-90" id="koreanasha-services">
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" data-aos="fade-down" data-aos-duration="1000">
                     <div class="col-xl-8 col-lg-8 col-md-10">
                         <div class="section-area mb-55 section-area-top text-center">
                             <p class="mb-4" id="koreanasha_services_subtitle"></p>
@@ -499,7 +503,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row align-items-center">
+                <div class="row align-items-center" data-aos="fade-right" data-aos-duration="1000">
                     <div class="col-xl-6 col-lg-6">
                         <div class="about-img mb-50">
                             <img src="assets/img/s1.jpg" alt="">
@@ -514,7 +518,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row align-items-center">
+                <div class="row align-items-center" data-aos="fade-left" data-aos-duration="1000">
                     <div class="col-xl-6 col-lg-6 order-1 order-lg-2">
                         <!-- 첫 번째 컬럼 (이미지) -->
                         <div class="about-img mb-50">
@@ -531,7 +535,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row align-items-center">
+                <div class="row align-items-center" data-aos="fade-right" data-aos-duration="1000">
                     <div class="col-xl-6 col-lg-6">
                         <div class="about-img mb-50">
                             <img src="assets/img/s3.jpg" alt="">
@@ -553,7 +557,7 @@
         <!-- reviews area start -->
         <section class="pb-90" id="reviews">
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" data-aos="fade-down" data-aos-duration="1000">
                     <div class="col-xl-8 col-lg-8 col-md-10">
                         <div class="section-area mb-55 section-area-top text-center">
                             <p id="reviews_subtitle"></p>
@@ -670,7 +674,7 @@
         <!-- faq area start -->
         <section class="pt-100 pb-90 bg-gray" id="faq">
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" data-aos="fade-down" data-aos-duration="1000">
                     <div class="col-xl-8 col-lg-8 col-md-10">
                         <div class="section-area mb-80 section-area-top text-center">
                             <p class="mb-4" id="faq_subtitle"></p>
@@ -683,7 +687,8 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="faq_q1"></button>
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+                                    id="faq_q1"></button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                 data-bs-parent="#Expp">
@@ -695,7 +700,8 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="faq_q2"></button>
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                                    id="faq_q2"></button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#Expp">
@@ -707,7 +713,8 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="faq_q3"></button>
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                                    id="faq_q3"></button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                 data-bs-parent="#Expp">
@@ -719,7 +726,8 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" id="faq_q4"></button>
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+                                    id="faq_q4"></button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                 data-bs-parent="#Expp">
@@ -731,7 +739,8 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFive">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" id="faq_q5"></button>
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
+                                    id="faq_q5"></button>
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                 data-bs-parent="#Expp">
@@ -743,7 +752,8 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingSix">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" id="faq_q6"></button>
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"
+                                    id="faq_q6"></button>
                             </h2>
                             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                                 data-bs-parent="#Expp">
@@ -755,7 +765,8 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingSeven">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" id="faq_q7"></button>
+                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven"
+                                    id="faq_q7"></button>
                             </h2>
                             <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                                 data-bs-parent="#Expp">
@@ -767,7 +778,8 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingEight">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight" id="faq_q8"></button>
+                                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight"
+                                    id="faq_q8"></button>
                             </h2>
                             <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                                 data-bs-parent="#Expp">
@@ -779,7 +791,8 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingNine">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine" id="faq_q9"></button>
+                                    data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine"
+                                    id="faq_q9"></button>
                             </h2>
                             <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
                                 data-bs-parent="#Expp">
@@ -791,7 +804,8 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTen">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen" id="faq_q10"></button>
+                                    data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen"
+                                    id="faq_q10"></button>
                             </h2>
                             <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
                                 data-bs-parent="#Expp">
@@ -818,21 +832,35 @@
                                 <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo" class="logo"></a>
                             </div>
                             <p class="footer-widget-text mb-35" id="footer_description"></p>
-
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-7 col-md-7 col-sm-12 order-md-3 order-xl-4">
                         <div class="footer-widget ml-80 mb-40">
                             <ul class="d-flex gap-3">
-                                <li><a href="https://www.instagram.com/koreanasha" target="_blank"><img
-                                            src="assets/img/icon/instagram.svg" alt="instagram" width="38"></a></li>
-                                <li><a href="https://www.facebook.com/share/1CYHSpjNwS/?mibextid=LQQJ4d"
-                                        target="_blank"><img src="assets/img/icon/facebook.svg" alt="facebook"
-                                            width="38"></a></li>
-                                <li><a href="https://www.tiktok.com/@koreanasha" target="_blank"><img
-                                            src="assets/img/icon/tiktok.svg" alt="tiktok" width="38"></a></li>
-                                <li><a href="https://t.me/+3Whrp2ehhhVhOWI1" target="_blank"><img
-                                            src="assets/img/icon/telegram.svg" alt="telegram" width="38"></a>
+                                <li>
+                                    <a href="https://www.instagram.com/koreanasha" target="_blank"><img
+                                            src="assets/img/icon/instagram.svg" alt="Instagram" width="38"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.tiktok.com/@koreanasha" target="_blank"><img
+                                            src="assets/img/icon/tiktok.svg" alt="Tiktok" width="38"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/@koreanasha3566" target="_blank"><img
+                                            src="assets/img/icon/youtube.svg" alt="Youtube" width="38"></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/share/1CYHSpjNwS/?mibextid=LQQJ4d"
+                                        target="_blank"><img src="assets/img/icon/facebook.svg" alt="Facebook"
+                                            width="38"></a>
+                                </li>
+                                <li>
+                                    <a href="https://vk.com/clips/id825477136" target="_blank"><img
+                                            src="assets/img/icon/vk.svg" alt="VKontakte" width="38"></a>
+                                </li>
+                                <li>
+                                    <a href="https://t.me/koreanashaedu" target="_blank"><img
+                                            src="assets/img/icon/telegram.svg" alt="Telegram" width="38"></a>
                                 </li>
                             </ul>
                         </div>
@@ -842,6 +870,25 @@
         </div>
     </footer>
     <!-- footer area end -->
+
+    <!-- 모달 창 -->
+    <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="applyModalLabel">모달 제목</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                </div>
+                <div class="modal-body">
+                    여기에 모달 내용을 입력하세요.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-primary">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- JS here -->
     <script src="assets/js/jquery.min.js"></script>
@@ -855,14 +902,22 @@
     <script src="assets/js/odometer.min.js"></script>
     <script src="assets/js/appear.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/i18next/i18next.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
+    <script src="assets/js/lang.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const tracks = document.querySelectorAll(".slider-track");
 
             tracks.forEach((track, index) => {
                 const slides = Array.from(track.children);
-                const slideWidth = slides[0].offsetWidth + 20; // 슬라이드 너비 + 간격
-                const trackWidth = slides.length * slideWidth;
+                const slideGap = 40; // 슬라이드 간격
+
+                // 🚀 모든 슬라이드의 개별 너비를 합산하여 정확한 trackWidth 계산
+                const trackWidth = slides.reduce((totalWidth, slide) => {
+                    return totalWidth + slide.getBoundingClientRect().width + slideGap;
+                }, 0);
                 let position = index % 2 === 0 ? 0 : -trackWidth; // 두 번째 줄은 반대 방향으로 시작
                 const isReverse = index == 3 ? false : index % 2 === 1;; // 홀수 인덱스는 반대 방향
 
@@ -911,9 +966,11 @@
         document.addEventListener("DOMContentLoaded", () => {
             const dropdown = document.querySelector(".dropdown");
             const toggleButton = dropdown.querySelector(".dropdown-toggle");
+            const menuItems = dropdown.querySelectorAll(".dropdown-menu li");
 
             // 드롭다운 열기/닫기 토글
-            toggleButton.addEventListener("click", () => {
+            toggleButton.addEventListener("click", (event) => {
+                event.stopPropagation(); // 부모 요소로의 클릭 이벤트 전파 방지
                 dropdown.classList.toggle("show");
             });
 
@@ -923,7 +980,18 @@
                     dropdown.classList.remove("show");
                 }
             });
+
+            // ✅ 각 li 클릭 시 드롭다운 닫고, 버튼에 국기 표시
+            menuItems.forEach((item) => {
+                item.addEventListener("click", (event) => {
+                    event.stopPropagation(); // 부모 요소로의 클릭 이벤트 전파 방지
+                    const selectedFlag = item.innerHTML.split(" ")[0]; // 국기만 가져오기
+                    toggleButton.innerHTML = selectedFlag; // 버튼 변경
+                    dropdown.classList.remove("show"); // 드롭다운 닫기
+                });
+            });
         });
+
 
         document.querySelectorAll('li a[href="#reviews"]').forEach(link => {
             link.parentElement.addEventListener('click', (e) => {
@@ -963,7 +1031,19 @@
                 initializeMobileMenu();
             });
         });
+    </script>
+    <script>
+        AOS.init({
+            once: false // false로 설정하면 스크롤할 때마다 다시 실행됨
+        });
 
+        window.addEventListener('load', function () {
+            AOS.refresh(); // 페이지 로드 후 AOS 다시 감지
+        });
+
+        window.addEventListener('scroll', function () {
+            AOS.refresh(); // 스크롤할 때마다 다시 감지
+        });
     </script>
 </body>
 

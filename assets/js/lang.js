@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
             resources: {
                 ko: {
                     translation: {
+                        lang_flag: "🇰🇷",
                         header_menu_about_us: "유학원 소개",
                         header_menu_pricing_plans: "가격 안내",
                         header_menu_koreanasha_services: "서비스 안내",
@@ -46,13 +47,15 @@ document.addEventListener("DOMContentLoaded", function () {
                         pricing_plans_title: "준비부터 입학까지,<br><span style=\"color: #FF4242;\">한국 유학은 Koreanasha</span>",
                         pricing_plans_description: "한국 대학 입학을 꿈꾸는 여러분을 위해 세 가지 요금제를 준비했습니다.",
 
-                        pricing_plans_plan1_title: "베이직 플랜:<br>어학원, 학사 과정",
+                        pricing_plans_plan1_title: "베이직 플랜",
+                        pricing_plans_plan1_subtitle: "어학원, 학사 과정",
                         pricing_plans_plan1_description1: "1개 대학교 선정 + 서류 제출",
                         pricing_plans_plan1_description2: "서류 준비",
                         pricing_plans_plan1_description3: "1회 상담 + 담당자와 채팅",
                         pricing_plans_plan1_btn: "무료 상담받기",
 
-                        pricing_plans_plan2_title: "올인원 플랜:<br>어학원, 학사 과정, 석사 과정",
+                        pricing_plans_plan2_title: "올인원 플랜",
+                        pricing_plans_plan2_subtitle: "어학원, 학사 과정, 석사 과정",
                         pricing_plans_plan2_description1: "3개 대학교 선정 + 서류 제출",
                         pricing_plans_plan2_description2: "서류 준비",
                         pricing_plans_plan2_description3: "전체 지원 과정 동행",
@@ -66,7 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         pricing_plans_plan2_btn: "무료 상담받기",
 
                         pricing_plans_plan3_subtitle: "최대할인",
-                        pricing_plans_plan3_title: "프리미엄 플랜:<br>어학원, 학사 과정, 석사 과정",
+                        pricing_plans_plan3_title: "프리미엄 플랜",
+                        pricing_plans_plan3_description: "어학원, 학사 과정, 석사 과정",
                         pricing_plans_plan3_description1: "3개 대학교 선정 + 서류 제출",
                         pricing_plans_plan3_description2: "서류 준비",
                         pricing_plans_plan3_description3: "전체 지원 과정 동행",
@@ -114,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         faq_q9: "방과 후에 바로 입학해도 될까요?",
                         faq_q10: "한국대학 졸업 후 직장 구하기가 쉽나요?",
 
-                        faq_a1: "아래와 같으며, 대학과 학과에 따라 추가 서류가 필요할 수도 있고, 교사와 고용주의 추천서와 올림픽 참가 증명서를 제출할 수 있습니다.<br>1. * 영어로 번역되고 공증인 + 아포스티유에 의해 인증된 중등교육/SPO 졸업장<br>2. 공증인 + 아포스티유에 의해 인증된 영어로 번역된 점수 첨부 파일<br>3. 여권 사본.<br>4. 양친의 여권 사본 부모가 외국 여권을 가지고 있지 않은 경우, 여권을 영어로 번역하고 공증을 받아야 합니다.<br>5. 번역되고 공증된 출생 증명서<br>6. 한국어 또는 영어(TOPIK, TOEFL, IELTS) 중 하나에 대한 지식 인증서.<br>7. 15,000달러 이상 은행증명서 (대학위치에 따라 금액이 변동될 수 있음) (30일 기한)",
+                        faq_a1: "아래와 같으며, 대학과 학과에 따라 추가 서류가 필요할 수도 있고, 교사와 고용주의 추천서와 올림픽 참가 증명서를 제출할 수 있습니다.<br><br>1. * 영어로 번역되고 공증인 + 아포스티유에 의해 인증된 중등교육/SPO 졸업장<br>2. 공증인 + 아포스티유에 의해 인증된 영어로 번역된 점수 첨부 파일<br>3. 여권 사본.<br>4. 양친의 여권 사본 부모가 외국 여권을 가지고 있지 않은 경우, 여권을 영어로 번역하고 공증을 받아야 합니다.<br>5. 번역되고 공증된 출생 증명서<br>6. 한국어 또는 영어(TOPIK, TOEFL, IELTS) 중 하나에 대한 지식 인증서.<br>7. 15,000달러 이상 은행증명서 (대학위치에 따라 금액이 변동될 수 있음) (30일 기한)",
                         faq_a2: "한국 대학에 입학하기 위해서는 한국어 또는 영어(TOPIK, TOEFL, IELTS) 자격증이 필요하며, 한국어 능력을 결정하는 내부 시험에서 여러분을 받아들일 수 있는 대학도 있습니다.",
                         faq_a3: "각 대학은 TOPIK, TOEFL, IELTS 인증을 받습니다. 하지만 국내 국어능력시험이나 어느 한국 대학에서나 볼 수 있는 어학 강좌의 자격증으로 세종시 자격증을 딸 수 있는 대학이 있습니다.",
                         faq_a4: "당신 전공에 영어 과목이 있으면 가능합니다.",
@@ -130,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 ru: {
                     translation: {
+                        lang_flag: "🇷🇺",
                         header_menu_about_us: "О компании",
                         header_menu_pricing_plans: "Тарифы",
                         header_menu_koreanasha_services: "Услуги",
@@ -151,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         about_us_section2_title: "“Меня зовут Чеботарева Алина, я эксперт по корейскому языку и культуре, выпускница факультета корейского языка и литературы университета Soongsil.”",
                         about_us_section2_description: "Благодаря глубоким знаниям в области корейского образования и культуры, я предоставляю индивидуальный подход и консультации. Основываясь на целях студентов и раскрытии их потенциала, я создаю персонализированные стратегии и детально сопровождаю весь процесс подготовки к учебе. Начните свое путешествие к осуществлению мечты об учебе в Корее уже сейчас!",
                         about_us_section3_subtitle: "<h5 class=\"text-white\" style=\"margin-bottom: 0px;\">Сайранова Александра</h5>куратор Koreanasha",
-                        about_us_section3_title: "“Я, Сайранова Александра, выпускница факультета международной торговли университета Soongsil. Используя свой профессионализм, я готова взять на себя ответственность за ваш образовательный путь.”",
+                        about_us_section3_title: "“Я, Сайранова Александра, выпускница факультета международной торговли университета Soongsil. я готова взять на себя ответственность за ваш образовательный путь.”",
                         about_us_section3_description: "От выбора университета до поступления, я помогу справиться со всеми сложностями и организую процесс максимально эффективно. Вместе мы превратим ваш потенциал в реальность. С Александрой ваши мечты будут ближе, чем вы думаете. \"Ваши мечты — это лишь начало вашего пути, и я буду рядом с вами на каждом этапе!\"",
                     
                         why_koreanasha_title: "Если вы поступаете вместе с Koreanasha,<br><span class=\"text-gradation\">то поступление будет простым и комфортным!</span>",
@@ -168,13 +173,15 @@ document.addEventListener("DOMContentLoaded", function () {
                         pricing_plans_title: "От подготовки до поступления,<br><span style=\"color: #FF4242;\">поступайте в Южную Корею вместе с Koreanasha</span>",
                         pricing_plans_description: "Для тех кто мечтает поступить в корейский университет, мы подготовили три тарифных плана, которые соответствуют вашим потребностям.",
 
-                        pricing_plans_plan1_title: "Базовый план:<br>Языковая школа, программа бакалавриата",
+                        pricing_plans_plan1_title: "Базовый план",
+                        pricing_plans_plan1_subtitle: "Языковая школа, программа бакалавриата",
                         pricing_plans_plan1_description1: "Выбор 1 университета + подача документов",
                         pricing_plans_plan1_description2: "Подготовка документов",
                         pricing_plans_plan1_description3: "1 консультация + чат с куратором",
                         pricing_plans_plan1_btn: "Бесплатная консультация",
 
-                        pricing_plans_plan2_title: "План 'Все включено':<br>Языковая школа, программа бакалавриата, магистратура",
+                        pricing_plans_plan2_title: "План 'Все включено",
+                        pricing_plans_plan2_subtitle: "Языковая школа, программа бакалавриата, магистратура",
                         pricing_plans_plan2_description1: "Выбор 3 университетов + подача документов",
                         pricing_plans_plan2_description2: "Подготовка документов",
                         pricing_plans_plan2_description3: "Полное сопровождение на всех этапах",
@@ -188,7 +195,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         pricing_plans_plan2_btn: "Бесплатная консультация",
 
                         pricing_plans_plan3_subtitle: "Максимальная скидка",
-                        pricing_plans_plan3_title: "Премиум план:<br>Языковая школа, программа бакалавриата, магистратура",
+                        pricing_plans_plan3_title: "Премиум план",
+                        pricing_plans_plan3_description: "Языковая школа, программа бакалавриата, магистратура",
                         pricing_plans_plan3_description1: "Выбор 3 университетов + подача документов",
                         pricing_plans_plan3_description2: "Подготовка документов",
                         pricing_plans_plan3_description3: "Полное сопровождение на всех этапах",
@@ -203,8 +211,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         koreanasha_services_title: "Koreanasha с вами во всех ярких моментах<br><span class=\"text-blue\">вашей студенческой жизни.</span>",
                         koreanasha_services_description: "С самого начала подготовки к обучению в Южной Корее и до момента достижения ваших целей Koreanasha будет рядом с вами.",
 
-                        koreanasha_services_section1_title: "Индивидуальные рекомендации по университетам и языковым школам специально для вас Мы предлагаем лучшие университеты и языковые школы, которые идеально соответствуют способностям и целям студента.",
-                        koreanasha_services_section1_description: "Мы предоставляем подробную консультацию по стипендиальным программам посредством индивидуальных консультаций и отвечаем за весь процесс, от подготовки вступительных документов до общения с университетами.",
+                        koreanasha_services_section1_title: "Индивидуальные рекомендации по университетам и языковым школам специально для вас.",
+                        koreanasha_services_section1_description: "Мы предлагаем лучшие университеты и языковые школы, которые идеально соответствуют способностям и целям студента. Мы предоставляем подробную консультацию по стипендиальным программам посредством индивидуальных консультаций и отвечаем за весь процесс, от подготовки вступительных документов до общения с университетами.",
 
                         koreanasha_services_section2_title: "Никаких беспокойств даже после поступления: полная поддержка наших студентов.",
                         koreanasha_services_section2_description: "Мы оказываем тщательную поддержку и консультации на всех этапах адаптации к студенческой жизни, включая выдачу виз, подачу заявления на получение регистрационной карты иностранца и регистрацию на занятия.",
