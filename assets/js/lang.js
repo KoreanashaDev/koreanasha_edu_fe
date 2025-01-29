@@ -268,10 +268,22 @@ function changeLanguage(lang) {
 }
 
 function updateContent() {
-    Object.keys(i18next.store.data[i18next.language].translation).forEach(key => {
-        const element = document.getElementById(key);
-        if (element) {
-            element.innerHTML = i18next.t(key); // HTML 태그 적용
-        }
-    });
+    setTimeout(() => {
+        document.querySelectorAll("[id]").forEach(element => {
+            const key = element.id;
+            if (i18next.exists(key)) {
+                element.innerHTML = i18next.t(key);
+            }
+        });
+    }, 50); // 🔹 약간의 지연을 줘서 DOM이 완전히 렌더링된 후 실행
 }
+
+// 🔥 DOM 변경을 감지해서 자동 번역 적용
+const observer = new MutationObserver(() => {
+    updateContent();
+});
+
+observer.observe(document.body, {
+    childList: true,
+    subtree: true
+});
