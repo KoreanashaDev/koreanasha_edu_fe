@@ -1194,11 +1194,18 @@
             AOS.refresh(); // 스크롤할 때마다 다시 감지
         });
 
-        window.addEventListener("load", function () {
-            setTimeout(function () {
-                window.scrollTo(0, 0);
-            }, 100); // 100ms 딜레이 추가
-        });
+        window.history.scrollRestoration = "manual"; // 브라우저의 기본 스크롤 복원 기능 비활성화
+
+window.addEventListener("load", function () {
+    setTimeout(function () {
+        if (!sessionStorage.getItem("pageLoaded")) {
+            window.scrollTo(0, 0);
+            sessionStorage.setItem("pageLoaded", "true");
+        }
+    }, 50); // 50ms 딜레이 추가하여 레이아웃 안정화
+});
+
+
 
     </script>
 </body>
