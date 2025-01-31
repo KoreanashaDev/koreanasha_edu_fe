@@ -130,6 +130,52 @@ document.addEventListener("DOMContentLoaded", function () {
                         faq_a10: "한국에서 취업은 전공에 따라 다릅니다. 공학, 비즈니스 분야는 비교적으로 쉬우나 인문학 분야는 어려울 수 있습니다.",
 
                         footer_description: "<strong>대표</strong>: 김예찬<br><strong>이메일</strong>: kimych072362@gmail.com<br><strong>사업자등록번호</strong>: 876-81-00110",
+
+                        modal_title: "상담글을 작성하고<br>무료로 한국대학 컨설팅을 받아보세요.",
+                        modal_label_name_title: "이름",
+                        modal_label_nationality_title: "국적",
+                        modal_label_age_title: "나이",
+                        modal_label_education_title: "최종학위",
+                        modal_label_education_option_default: "옵션 선택",
+                        modal_label_education_option_highschool: "고등학교",
+                        modal_label_education_option_highschool: "학사",
+                        modal_label_education_option_highschool: "석사",
+                        modal_label_education_option_highschool: "박사",
+                        modal_label_gpa_title: "학점(GPA)",
+                        modal_label_language_score_title: "어학성적 (TOPIK, TOEFL, IELTS 등)",
+                        modal_label_desired_university_title: "입학하고 싶은 한국 대학교와 그 이유",
+                        modal_label_major_title: "희망 전공",
+                        modal_label_year_title: "입학 희망 연도",
+                        modal_label_budget_title: "예상 학비 지출 금액",
+                        modal_label_city_title: "희망 도시",
+                        modal_label_important_factors_title: "대학 선택 시 중요하게 생각하는 점",
+                        modal_label_reason_title: "한국 대학교에 입학하고 싶은 이유",
+                        modal_label_consult_time_title: "상담 희망 시간",
+                        modal_label_experience_title: "타 유학원 컨설팅 경험",
+                        modal_label_experience_option_default: "옵션 선택",
+                        modal_label_experience_option_yes: "예",
+                        modal_label_experience_option_no: "아니오",
+                        modal_label_contact_title: "Telegram ID / 전화번호",
+                        modal_label_source_title: "Koreanasha를 알게 된 경로",
+                        modal_label_source_option_default: "옵션 선택",
+                        modal_label_source_option_instagram: "인스타그램",
+                        modal_label_source_option_youtube: "유튜브",
+                        modal_label_source_option_tiktok: "틱톡",
+                        modal_label_source_option_facebook: "페이스북",
+                        modal_label_source_option_VKontakte: "VK",
+                        modal_label_source_option_telegram: "텔레그램",
+                        modal_label_source_option_recommendation: "지인추천",
+                        modal_label_source_option_search: "인터넷 검색",
+                        modal_label_source_option_other: "기타",
+                        modal_label_inquiries_title: "기타 문의나 의견",
+                        modal_label_privacy_agreement_title: "개인정보 수집 및 이용에 동의합니다.",
+                        modal_label_final_stage_title: "상담글이 성공적으로 등록되었습니다!",
+                        modal_label_final_stage_description: "답변이 등록되면 알림(텔레그램 또는 문자)을 드립니다.<br>Koreanasha는 오직 학생만을 위한 100% 맞춤형 컨설팅을 지원합니다.<br>감사합니다.",
+                        modal_label_final_stage_btn: "확인",
+
+                        other_source: "기타 입력",
+                        language_score: "증명서 없을 시 현재 준비 과정 작성",
+
                     }
                 },
                 ru: {
@@ -141,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         header_menu_reviews: "Отзывы",
                         header_menu_faq: "FAQ",
                         header_btn: "Бесплатная консультация",
-                        
+
                         banner_title: "Учеба в Корее - это просто!",
                         banner_description: "Поможем воплотить ваши мечты в реальность.<br>Начните свой первый шаг к мечте с бесплатной консультации!",
                         banner_btn: "Бесплатная консультация",
@@ -158,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         about_us_section3_subtitle: "<h5 class=\"text-white\" style=\"margin-bottom: 0px;\">Сайранова Александра</h5>куратор Koreanasha",
                         about_us_section3_title: "“Я, Сайранова Александра, выпускница факультета международной торговли университета Soongsil. я готова взять на себя ответственность за ваш образовательный путь.”",
                         about_us_section3_description: "От выбора университета до поступления, я помогу справиться со всеми сложностями и организую процесс максимально эффективно. Вместе мы превратим ваш потенциал в реальность. С Александрой ваши мечты будут ближе, чем вы думаете. \"Ваши мечты — это лишь начало вашего пути, и я буду рядом с вами на каждом этапе!\"",
-                    
+
                         why_koreanasha_title: "Поступление с Koreanasha<br><span class=\"text-gradation\">будет простым и комфортным!</span>",
                         why_koreanasha_section1_title: "Полная поддержка,<br>от начала до успеха!",
                         why_koreanasha_section1_description: "Мы отвечаем за все аспекты обучения за рубежом в Южной Корее. От выбора программы, подготовки документов до успешного поступления в университет— мы будем рядом с вами от начала и до конца. Koreanasha — не просто информация о поступлении, а партнер по достижению успеха.",
@@ -219,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         koreanasha_services_section3_title: "Мы предоставим вам все необходимое для успешного старта в новой среде.",
                         koreanasha_services_section3_description: "Сообщество студентов, которые поступили вместе с нами и уже обучаются в Южной Корее предоставляет возможности для обмена информацией и поиска друзей. Мы оказываем полную поддержку на каждом этапе вашего обучения за рубежом: от поиска жилья до информации о жизни и налаживания связей — все вместе с нами в Koreanasha.",
-                        
+
                         reviews_subtitle: "Отзывы",
                         reviews_title: "«Вместе с Корея Наша,<br><span class=\"text-blue\">я осуществил свою мечту.»</span>",
 
@@ -258,6 +304,52 @@ document.addEventListener("DOMContentLoaded", function () {
                         faq_a10: "Процесс и результаты трудоустройства зависят от специальности, которую Вы выбрали в университете.",
 
                         footer_description: "<strong>Генеральный директор</strong>: Ким Ечан<br><strong>Электронная почта</strong>: kimych072362@gmail.com<br><strong>Регистрационный номер предприятия</strong>: 876-81-00110",
+
+                        modal_title: "Заполните заявку<br>и получите бесплатную консультацию по корейским университетам.",
+                        modal_label_name_title: "Имя",
+                        modal_label_nationality_title: "Гражданство",
+                        modal_label_age_title: "Возраст",
+                        modal_label_education_title: "Последний уровень образования",
+                        modal_label_education_option_default: "Выберите вариант",
+                        modal_label_education_option_highschool: "Средняя школа",
+                        modal_label_education_option_bachelor: "Бакалавриат",
+                        modal_label_education_option_master: "Магистратура",
+                        modal_label_education_option_phd: "Докторантура",
+                        modal_label_gpa_title: "Средний балл (GPA)",
+                        modal_label_language_score_title: "Языковые тесты (TOPIK, TOEFL, IELTS и др.)",
+                        modal_label_desired_university_title: "Желаемый университет в Корее и причина выбора",
+                        modal_label_major_title: "Желаемая специальность",
+                        modal_label_year_title: "Год поступления",
+                        modal_label_budget_title: "Предполагаемые расходы на обучение",
+                        modal_label_city_title: "Желаемый город",
+                        modal_label_important_factors_title: "Что важно при выборе университета?",
+                        modal_label_reason_title: "Почему хотите поступить в корейский университет?",
+                        modal_label_consult_time_title: "Желаемое время консультации",
+                        modal_label_experience_title: "Был ли у вас опыт консультаций с другими агентствами?",
+                        modal_label_experience_option_default: "Выберите вариант",
+                        modal_label_experience_option_yes: "Да",
+                        modal_label_experience_option_no: "Нет",
+                        modal_label_contact_title: "Telegram ID / Номер телефона",
+                        modal_label_source_title: "Как вы узнали о Koreanasha?",
+                        modal_label_source_option_default: "Выберите вариант",
+                        modal_label_source_option_instagram: "Instagram",
+                        modal_label_source_option_youtube: "YouTube",
+                        modal_label_source_option_tiktok: "TikTok",
+                        modal_label_source_option_facebook: "Facebook",
+                        modal_label_source_option_VKontakte: "VK",
+                        modal_label_source_option_telegram: "Telegram",
+                        modal_label_source_option_recommendation: "Рекомендация друга",
+                        modal_label_source_option_search: "Поиск в интернете",
+                        modal_label_source_option_other: "Другое",
+                        modal_label_inquiries_title: "Дополнительные вопросы или комментарии",
+                        modal_label_privacy_agreement_title: "Я согласен(а) с политикой обработки персональных данных.",
+                        modal_label_final_stage_title: "Заявка успешно зарегистрирована!",
+                        modal_label_final_stage_description: "Как только ответ будет готов, мы уведомим вас (через Telegram или SMS).<br>Koreanasha предлагает исключительно персонализированные консультации для студентов.<br>Спасибо!",
+                        modal_label_final_stage_btn: "Подтвердить",
+
+                        other_source: "Введите другое",
+                        language_score: "Укажите текущий процесс подготовки, если нет сертификата"
+
                     }
                 }
             }
@@ -276,14 +368,18 @@ function changeLanguage(lang) {
 }
 
 function updateContent() {
-    setTimeout(() => {
+    requestAnimationFrame(() => {
         document.querySelectorAll("[id]").forEach(element => {
             const key = element.id;
             if (i18next.exists(key)) {
-                element.innerHTML = i18next.t(key);
+                if (["other_source", "language_score"].includes(key)) {
+                    element.placeholder = i18next.t(key);
+                } else {
+                    element.innerHTML = i18next.t(key);
+                }
             }
         });
-    }, 50); // 🔹 약간의 지연을 줘서 DOM이 완전히 렌더링된 후 실행
+    });
 }
 
 // 🔥 DOM 변경을 감지해서 자동 번역 적용
