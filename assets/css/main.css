@@ -3861,7 +3861,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   align-items: end;
   position: relative;
   z-index: 1;
-  background-image: url('../../assets/img/banner/banner.webp');
+  background-image: url('../../assets/img/banner/banner_c.webp');
   background-size: cover;
   /* 배경 이미지를 전체 영역에 맞춤 */
   background-position: center;
@@ -23294,7 +23294,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 @media (max-width: 575px) {
   .single-banner {
-    background-image: url('../../assets/img/banner/banner_m.webp');
+    background-image: url('../../assets/img/banner/banner_m_c.webp');
   }
 
   .banner-content .section-area {
@@ -23362,7 +23362,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 @media only screen and (min-width: 575px) and (max-width: 1199px) {
   .single-banner {
-    background-image: url('../../assets/img/banner/banner_t.webp');
+    background-image: url('../../assets/img/banner/banner_t_c.webp');
   }
 
   .lead {
