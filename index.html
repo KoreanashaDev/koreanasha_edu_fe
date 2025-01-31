@@ -987,9 +987,9 @@
                     </form>
                 </div>
                 <div class="modal-footer custom-footer" id="modal-footer" style="border-radius: 0px 0px 24px 24px;">
-                    <button type="button" class="prev-btn" id="prevStep">&lt; 이전</button>
-                    <span id="stepIndicator" class="step-indicator">1/4단계</span>
-                    <button type="button" class="next-btn" id="nextStep">다음 &gt;</button>
+                    <button type="button" class="prev-btn" id="prevStep">&lt; PREVIOUS</button>
+                    <span id="stepIndicator" class="step-indicator">1/4</span>
+                    <button type="button" class="next-btn" id="nextStep">NEXT &gt;</button>
                 </div>
             </div>
         </div>
@@ -1035,9 +1035,9 @@
                     modalFooter.style.display = "flex";
                 }
 
-                stepIndicator.textContent = `${step}/${totalSteps}단계`;
+                stepIndicator.textContent = `${step}/${totalSteps}`;
                 prevButton.style.display = step === 1 ? "none" : "inline-block";
-                nextButton.textContent = step === totalSteps ? "제출" : "다음 >";
+                nextButton.textContent = step === totalSteps ? "SUBMIT" : "NEXT >";
             }
 
             prevButton.addEventListener("click", function () {
