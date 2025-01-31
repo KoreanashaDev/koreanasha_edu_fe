@@ -887,13 +887,13 @@
                         <!-- Step 1 -->
                         <div class="step step-1">
                             <label for="name">이름 *</label>
-                            <input type="text" id="name" class="form-control" placeholder="귀하의 이름" required>
+                            <input type="text" id="name" class="form-control" required>
 
                             <label for="nationality">국적 *</label>
-                            <input type="text" id="nationality" class="form-control" placeholder="귀하의 국적" required>
+                            <input type="text" id="nationality" class="form-control" required>
 
                             <label for="age">나이 *</label>
-                            <input type="number" id="age" class="form-control" placeholder="귀하의 나이" required>
+                            <input type="number" id="age" class="form-control" required>
 
                             <label for="education">최종학위 *</label>
                             <select id="education" class="form-control" required>
@@ -904,8 +904,8 @@
                                 <option value="phd">박사</option>
                             </select>
 
-                            <label for="gpa">GPA *</label>
-                            <input type="text" id="gpa" class="form-control" placeholder="GPA 입력" required>
+                            <label for="gpa">학점(GPA) *</label>
+                            <input type="text" id="gpa" class="form-control" required>
                         </div>
 
                         <!-- Step 2 -->
@@ -921,9 +921,7 @@
                             <input type="text" id="major" class="form-control" required>
 
                             <label for="year">입학 희망 연도 *</label>
-                            <select id="year" class="form-control" required>
-                                <option value="">옵션 선택</option>
-                            </select>
+                            <select id="year" class="form-control" required></select>
 
                             <label for="budget">예상 학비 지출 금액 *</label>
                             <input type="text" id="budget" class="form-control" required>
@@ -1179,6 +1177,18 @@
             window.addEventListener("resize", () => {
                 initializeMobileMenu();
             });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const yearSelect = document.getElementById("year");
+            const currentYear = new Date().getFullYear();
+            for (let i = 0; i <= 10; i++) {
+                const year = currentYear + i;
+                const option = document.createElement("option");
+                option.value = year;
+                option.textContent = `${year}년`;
+                yearSelect.appendChild(option);
+            }
         });
     </script>
     <script>
