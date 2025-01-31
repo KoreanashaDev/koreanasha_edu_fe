@@ -62,10 +62,96 @@ html {
   /* 기본 줄바꿈 유지 */
 }
 
+.modal {
+  --bs-modal-border-radius: 24px !important;
+}
+
+.btn-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.modal-title {
+  font-weight: 600;
+  color: #145CE6;
+  letter-spacing: -0.4px;
+}
+
+.modal-body label {
+  color: #21272A;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.modal-body input,
+.modal-body select {
+  border-radius: 10px;
+  background: #F2F2F2;
+  color: #21272A;
+  font-size: 14px;
+  font-weight: 400;
+  border: 0px;
+  margin-bottom: 16px;
+  padding: 10px;
+}
+
+.modal-body input::placeholder,
+.modal-body select {
+  color: #697077;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* select 요소에 화살표 아이콘 추가 */
+.modal-body select {
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23697077"><path d="M7 10l5 5 5-5H7z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 36px; /* 화살표 위치 조정 */
+  cursor: pointer;
+}
+
+/* 모달 푸터 스타일 */
+.custom-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  border-top: none;
+  background: white;
+}
+
+/* 이전, 다음 버튼 스타일 */
+.prev-btn, .next-btn {
+  background: none;
+  border: none;
+  color: #697077;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* 중앙 단계 표시 스타일 */
+.step-indicator {
+  color: #A0A0A0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* 버튼 호버 효과 */
+.prev-btn:hover, .next-btn:hover {
+  color: #21272A;
+}
 
 
-#header_btn, #banner_btn  {
-  text-transform: none; /* 🔹 대소문자 변환 방지 */
+
+#header_btn,
+#banner_btn {
+  text-transform: none;
+  /* 🔹 대소문자 변환 방지 */
 }
 
 .logo {
@@ -23268,7 +23354,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
   .fa-bars {
     font-size: 18px;
   }
-  
+
   .h2_blog-content {
     padding: 20px;
   }
