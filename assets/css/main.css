@@ -366,8 +366,6 @@ body {
 .slide {
   flex-shrink: 0;
   height: 100px;
-  min-width: 0;
-  flex-basis: auto;
 }
 
 .slide-review {
