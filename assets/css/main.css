@@ -366,6 +366,7 @@ body {
 .slide {
   flex-shrink: 0;
   height: 100px;
+  flex-basis: auto;
 }
 
 .slide-review {
@@ -374,9 +375,9 @@ body {
 }
 
 .slide img {
-  width: 100%;
+  width: auto;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
 }
 
