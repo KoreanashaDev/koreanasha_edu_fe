@@ -989,6 +989,12 @@
                                 <label for="privacy-agreement" class="mb-0"
                                     id="modal_label_privacy_agreement_title"></label>
                             </div>
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="marketing-consent" class="me-2"
+                                    style="margin-bottom: 0px !important;">
+                                <label for="marketing-consent" class="mb-0"
+                                    id="modal_label_marketing_consent_title"></label>
+                            </div>
                         </div>
 
                         <!-- Step 5 (완료 페이지) -->
@@ -1148,7 +1154,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             const yearSelect = document.getElementById("year");
             const currentYear = new Date().getFullYear();
-            for (let i = 0; i <= 10; i++) {
+            for (let i = 0; i <= 3; i++) {
                 const year = currentYear + i;
                 const option = document.createElement("option");
                 option.value = year;
