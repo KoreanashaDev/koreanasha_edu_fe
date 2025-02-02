@@ -1046,6 +1046,22 @@
         let preferred_service = "";
         const totalSteps = 4;
 
+        const steps = document.querySelectorAll(".step");
+        const prevButton = document.getElementById("prevStep");
+        const nextButton = document.getElementById("nextStep");
+        const stepIndicator = document.getElementById("stepIndicator");
+        const modalTitlePanel = document.getElementById("modal-title-panel");
+        const modalFooter = document.getElementById("modal-footer");
+        const privacyCheckbox = document.getElementById("privacy-agreement");
+
+        function updateButtonText() {
+            if (currentStep === totalSteps) {
+                nextButton.innerText = i18next.t("submit");
+            } else {
+                nextButton.innerText = i18next.t("nextStep");
+            }
+        }
+
         function showStep(step) {
             steps.forEach((s, index) => {
                 s.classList.toggle("d-none", index + 1 !== step);
@@ -1066,6 +1082,76 @@
             currentStep = step;
             updateButtonText();
         }
+
+        function validateStep(step) {
+            const currentStepFields = document.querySelectorAll(`.step-${step} input:not([type="checkbox"]), .step-${step} select`);
+            let isValid = true;
+
+            currentStepFields.forEach(field => {
+                if (field.hasAttribute("required") && !field.value.trim()) {
+                    field.classList.add("is-invalid");
+                    field.classList.remove("is-valid");
+                    isValid = false;
+                } else {
+                    field.classList.remove("is-invalid");
+                    field.classList.add("is-valid");
+                }
+            });
+
+            // ✅ 4페이지에서 체크박스도 검증해야 함
+            if (step === totalSteps && !privacyCheckbox.checked) {
+                privacyCheckbox.classList.add("is-invalid");
+                isValid = false;
+            } else {
+                privacyCheckbox.classList.remove("is-invalid");
+            }
+
+            return isValid;
+        }
+
+        // ✅ 체크박스 변경 시 에러 제거
+        privacyCheckbox.addEventListener("change", function () {
+            if (this.checked) {
+                this.classList.remove("is-invalid");
+            }
+        });
+
+        // ✅ 입력 필드 값 변경 시 즉시 검증 (체크박스 제외)
+        document.querySelectorAll("input:not([type='checkbox']), select").forEach(field => {
+            field.addEventListener("input", function () {
+                if (this.value.trim()) {
+                    this.classList.remove("is-invalid");
+                    this.classList.add("is-valid");
+                } else {
+                    this.classList.add("is-invalid");
+                    this.classList.remove("is-valid");
+                }
+            });
+        });
+
+        prevButton.addEventListener("click", function () {
+            if (currentStep > 1) {
+                currentStep--;
+                showStep(currentStep);
+            }
+        });
+
+        nextButton.addEventListener("click", function () {
+            // ✅ 4페이지에서도 검증 수행
+            if (!validateStep(currentStep)) {
+                return;
+            }
+
+            if (currentStep < totalSteps) {
+                currentStep++;
+                showStep(currentStep);
+            } else {
+                // ✅ 최종 제출 처리 (5페이지로 이동)
+                apply();
+            }
+        });
+
+        showStep(currentStep);
 
         document.addEventListener("DOMContentLoaded", () => {
             const tracks = document.querySelectorAll(".slider-track");
@@ -1202,95 +1288,6 @@
                     otherInput.required = false;
                 }
             });
-        });
-
-        //modal function
-        document.addEventListener("DOMContentLoaded", function () {
-            const steps = document.querySelectorAll(".step");
-            const prevButton = document.getElementById("prevStep");
-            const nextButton = document.getElementById("nextStep");
-            const stepIndicator = document.getElementById("stepIndicator");
-            const modalTitlePanel = document.getElementById("modal-title-panel");
-            const modalFooter = document.getElementById("modal-footer");
-            const privacyCheckbox = document.getElementById("privacy-agreement");
-
-            function updateButtonText() {
-                if (currentStep === totalSteps) {
-                    nextButton.innerText = i18next.t("submit");
-                } else {
-                    nextButton.innerText = i18next.t("nextStep");
-                }
-            }
-
-            function validateStep(step) {
-                const currentStepFields = document.querySelectorAll(`.step-${step} input:not([type="checkbox"]), .step-${step} select`);
-                let isValid = true;
-
-                currentStepFields.forEach(field => {
-                    if (field.hasAttribute("required") && !field.value.trim()) {
-                        field.classList.add("is-invalid");
-                        field.classList.remove("is-valid");
-                        isValid = false;
-                    } else {
-                        field.classList.remove("is-invalid");
-                        field.classList.add("is-valid");
-                    }
-                });
-
-                // ✅ 4페이지에서 체크박스도 검증해야 함
-                if (step === totalSteps && !privacyCheckbox.checked) {
-                    privacyCheckbox.classList.add("is-invalid");
-                    isValid = false;
-                } else {
-                    privacyCheckbox.classList.remove("is-invalid");
-                }
-
-                return isValid;
-            }
-
-            // ✅ 체크박스 변경 시 에러 제거
-            privacyCheckbox.addEventListener("change", function () {
-                if (this.checked) {
-                    this.classList.remove("is-invalid");
-                }
-            });
-
-            // ✅ 입력 필드 값 변경 시 즉시 검증 (체크박스 제외)
-            document.querySelectorAll("input:not([type='checkbox']), select").forEach(field => {
-                field.addEventListener("input", function () {
-                    if (this.value.trim()) {
-                        this.classList.remove("is-invalid");
-                        this.classList.add("is-valid");
-                    } else {
-                        this.classList.add("is-invalid");
-                        this.classList.remove("is-valid");
-                    }
-                });
-            });
-
-            prevButton.addEventListener("click", function () {
-                if (currentStep > 1) {
-                    currentStep--;
-                    showStep(currentStep);
-                }
-            });
-
-            nextButton.addEventListener("click", function () {
-                // ✅ 4페이지에서도 검증 수행
-                if (!validateStep(currentStep)) {
-                    return;
-                }
-
-                if (currentStep < totalSteps) {
-                    currentStep++;
-                    showStep(currentStep);
-                } else {
-                    // ✅ 최종 제출 처리 (5페이지로 이동)
-                    apply();
-                }
-            });
-
-            showStep(currentStep);
         });
 
         AOS.init({
