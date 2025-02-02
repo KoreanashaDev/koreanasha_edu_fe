@@ -136,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         modal_label_nationality_title: "국적",
                         modal_label_age_title: "나이",
                         modal_label_education_title: "최종학위",
+                        modal_label_year_option_default: "옵션 선택",
                         modal_label_education_option_default: "옵션 선택",
                         modal_label_education_option_highschool: "고등학교",
                         modal_label_education_option_bachelor: "학사",
@@ -177,7 +178,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         language_score: "증명서 없을 시 현재 준비 과정 작성",
 
                         language_flag: "<img src=\"assets/img/icon/korea_flag_icon.svg\" width=\"24\" height=\"24\" style=\"margin-right: 3px;\" class=\"flag_icon\"><span>한국어</span>",
-
+                        prevStep: "< 이전",
+                        nextStep: "다음 >",
+                        submit: "제출하기"
                     }
                 },
                 ru: {
@@ -312,6 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         modal_label_nationality_title: "Гражданство",
                         modal_label_age_title: "Возраст",
                         modal_label_education_title: "Уровень образования",
+                        modal_label_year_option_default: "Выберите вариант",
                         modal_label_education_option_default: "Выберите вариант",
                         modal_label_education_option_highschool: "Средняя школа",
                         modal_label_education_option_bachelor: "Бакалавриат",
@@ -353,7 +357,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         language_score: "Укажите текущий процесс подготовки, если нет сертификата",
 
                         language_flag: "<img src=\"assets/img/icon/russia_flag_icon.svg\" width=\"24\" height=\"24\" style=\"margin-right: 3px;\" class=\"flag_icon\"><span>Русский</span>",
-
+                        prevStep: "< Назад",
+                        nextStep: "Далее >",
+                        submit: "Отправить"
                     }
                 }
             }
@@ -367,7 +373,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function changeLanguage(lang) {
     i18next.changeLanguage(lang, function () {
         localStorage.setItem("lang", lang); // 선택한 언어 저장
-        updateContent();
+        updateContent();  // ✅ 전체 UI 번역 업데이트
     });
 }
 
@@ -379,19 +385,57 @@ function updateContent() {
                 if (["other_source", "language_score"].includes(key)) {
                     element.placeholder = i18next.t(key);
                 } else {
-                    element.innerHTML = i18next.t(key);
+                    // ✅ NEXT 버튼일 경우 4페이지에서는 "제출하기" 유지
+                    if (element.id === "nextStep") {
+                        if (currentStep === totalSteps) {
+                            element.innerHTML = i18next.t("submit"); // ✅ "제출하기" 유지
+                        } else {
+                            element.innerHTML = i18next.t("nextStep"); // ✅ 다른 페이지는 정상 적용
+                        }
+                    } else {
+                        element.innerHTML = i18next.t(key);
+                    }
                 }
             }
         });
     });
 }
 
-// 🔥 DOM 변경을 감지해서 자동 번역 적용
-const observer = new MutationObserver(() => {
-    updateContent();
-});
+document.addEventListener("DOMContentLoaded", function () {
+    function addRequiredAsterisks() {
+        document.querySelectorAll("label[for]").forEach(label => {
+            const inputId = label.getAttribute("for");
+            const inputField = document.getElementById(inputId);
 
-observer.observe(document.body, {
-    childList: true,
-    subtree: true
+            if (inputField && inputField.hasAttribute("required")) {
+                // ✅ `*`을 동적으로 추가하되, 기존 `*`이 있으면 중복 방지
+                if (!label.querySelector(".required-asterisk")) {
+                    const asterisk = document.createElement("span");
+                    asterisk.classList.add("required-asterisk");
+                    asterisk.style.color = "red";
+                    asterisk.textContent = " *";
+                    label.appendChild(asterisk);
+                }
+            }
+        });
+    }
+
+    // ✅ 페이지 로드 시 `*` 적용
+    addRequiredAsterisks();
+
+    // ✅ i18next 번역 후에도 `*`이 유지되도록 보장
+    i18next.on("languageChanged", function () {
+        updateContent(); // 기존 번역 적용
+        addRequiredAsterisks(); // ✅ 번역 후 다시 `*` 적용
+    });
+
+    // ✅ MutationObserver를 사용하여 번역 후 자동 감지 (실시간 `*` 복구)
+    const observer = new MutationObserver(() => {
+        addRequiredAsterisks();
+    });
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
 });

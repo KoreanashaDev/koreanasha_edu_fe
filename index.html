@@ -13,7 +13,7 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css?v=202502012103">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css?v=20250202">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/meanmenu.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/main.css?v=202502012103">
+    <link rel="stylesheet" href="assets/css/main.css?v=20250202">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
@@ -74,11 +74,13 @@
                                 <button class="dropdown-toggle" style="color: #80839E;" id="language_flag"></button>
                                 <ul class="dropdown-menu">
                                     <li data-lang="ru" onclick="changeLanguage('ru')">
-                                        <img src="assets/img/icon/russia_flag_icon.svg" width="24" height="24" style="margin-right: 3px;" class="flag_icon">
+                                        <img src="assets/img/icon/russia_flag_icon.svg" width="24" height="24"
+                                            style="margin-right: 3px;" class="flag_icon">
                                         <span>Русский</span>
                                     </li>
                                     <li data-lang="ko" onclick="changeLanguage('ko')">
-                                        <img src="assets/img/icon/korea_flag_icon.svg" width="24" height="24" style="margin-right: 3px;" class="flag_icon">
+                                        <img src="assets/img/icon/korea_flag_icon.svg" width="24" height="24"
+                                            style="margin-right: 3px;" class="flag_icon">
                                         <span>한국어</span>
                                     </li>
                                 </ul>
@@ -926,7 +928,9 @@
                             <input type="text" id="major" class="form-control" required>
 
                             <label for="year" id="modal_label_year_title"></label>
-                            <select id="year" class="form-control" required></select>
+                            <select id="year" class="form-control" required>
+                                <option value="" id="modal_label_year_option_default"></option>
+                            </select>
 
                             <label for="budget" id="modal_label_budget_title"></label>
                             <input type="text" id="budget" class="form-control" required>
@@ -999,9 +1003,9 @@
                     </form>
                 </div>
                 <div class="modal-footer custom-footer" id="modal-footer" style="border-radius: 0px 0px 24px 24px;">
-                    <button type="button" class="prev-btn" id="prevStep">&lt; PREVIOUS</button>
+                    <button type="button" class="prev-btn" id="prevStep"></button>
                     <span id="stepIndicator" class="step-indicator">1/4</span>
-                    <button type="button" class="next-btn" id="nextStep">NEXT &gt;</button>
+                    <button type="button" class="next-btn" id="nextStep"></button>
                 </div>
             </div>
         </div>
@@ -1018,64 +1022,15 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/odometer.min.js"></script>
     <script src="assets/js/appear.min.js"></script>
-    <script src="assets/js/main.js?v=202502012103"></script>
+    <script src="assets/js/main.js?v=20250202"></script>
     <script src="https://unpkg.com/i18next/i18next.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
-    <script src="assets/js/lang.js?v=202502012103"></script>
+    <script src="assets/js/lang.js?v=20250202"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let currentStep = 1;
-            const totalSteps = 4;
-            const steps = document.querySelectorAll(".step");
-            const prevButton = document.getElementById("prevStep");
-            const nextButton = document.getElementById("nextStep");
-            const stepIndicator = document.getElementById("stepIndicator");
-            const modalTitlePanel = document.getElementById("modal-title-panel");
-            const modalFooter = document.getElementById("modal-footer");
+        let currentStep = 1;
+        const totalSteps = 4;
 
-            function showStep(step) {
-                steps.forEach((s, index) => {
-                    s.classList.toggle("d-none", index + 1 !== step);
-                });
-
-                if (step === 5) {
-                    modalTitlePanel.style.display = "none";  // step-5일 때 제목 숨김
-                    modalFooter.style.display = "none";
-                } else {
-                    modalTitlePanel.style.display = "block";  // 다른 단계에서는 제목 표시
-                    modalFooter.style.display = "flex";
-                }
-
-                stepIndicator.textContent = `${step}/${totalSteps}`;
-                prevButton.style.display = step === 1 ? "none" : "inline-block";
-                nextButton.textContent = step === totalSteps ? "SUBMIT" : "NEXT >";
-            }
-
-            prevButton.addEventListener("click", function () {
-                if (currentStep > 1) {
-                    currentStep--;
-                    showStep(currentStep);
-                }
-            });
-
-            nextButton.addEventListener("click", function () {
-                if (currentStep < totalSteps) {
-                    currentStep++;
-                    showStep(currentStep);
-                } else {
-                    document.querySelector(".step-4").classList.add("d-none");
-                    document.querySelector(".step-5").classList.remove("d-none");
-                    showStep(5);  // step-5로 전환
-                }
-            });
-
-            showStep(currentStep);
-        });
-
-    </script>
-
-    <script>
         document.addEventListener("DOMContentLoaded", () => {
             const tracks = document.querySelectorAll(".slider-track");
 
@@ -1150,8 +1105,6 @@
             });
         });
 
-
-
         document.querySelectorAll('li a[href="#reviews"]').forEach(link => {
             link.parentElement.addEventListener('click', (e) => {
                 e.preventDefault(); // 기본 링크 동작 방지
@@ -1191,6 +1144,7 @@
             });
         });
 
+        //get year function
         document.addEventListener("DOMContentLoaded", function () {
             const yearSelect = document.getElementById("year");
             const currentYear = new Date().getFullYear();
@@ -1212,6 +1166,118 @@
                     otherInput.required = false;
                 }
             });
+        });
+
+        //modal function
+        document.addEventListener("DOMContentLoaded", function () {
+            const steps = document.querySelectorAll(".step");
+            const prevButton = document.getElementById("prevStep");
+            const nextButton = document.getElementById("nextStep");
+            const stepIndicator = document.getElementById("stepIndicator");
+            const modalTitlePanel = document.getElementById("modal-title-panel");
+            const modalFooter = document.getElementById("modal-footer");
+            const privacyCheckbox = document.getElementById("privacy-agreement");
+
+            function updateButtonText() {
+                if (currentStep === totalSteps) {
+                    nextButton.innerText = i18next.t("submit");
+                } else {
+                    nextButton.innerText = i18next.t("nextStep");
+                }
+            }
+
+            function showStep(step) {
+                steps.forEach((s, index) => {
+                    s.classList.toggle("d-none", index + 1 !== step);
+                });
+
+                if (step === 5) {
+                    modalTitlePanel.style.display = "none";
+                    modalFooter.style.display = "none";
+                } else {
+                    modalTitlePanel.style.display = "block";
+                    modalFooter.style.display = "flex";
+                }
+
+                stepIndicator.textContent = `${step}/${totalSteps}`;
+                prevButton.style.display = step === 1 ? "none" : "inline-block";
+
+                // ✅ NEXT 버튼 강제 변경 유지
+                currentStep = step;
+                updateButtonText();
+            }
+
+            function validateStep(step) {
+                const currentStepFields = document.querySelectorAll(`.step-${step} input:not([type="checkbox"]), .step-${step} select`);
+                let isValid = true;
+
+                currentStepFields.forEach(field => {
+                    if (field.hasAttribute("required") && !field.value.trim()) {
+                        field.classList.add("is-invalid");
+                        field.classList.remove("is-valid");
+                        isValid = false;
+                    } else {
+                        field.classList.remove("is-invalid");
+                        field.classList.add("is-valid");
+                    }
+                });
+
+                // ✅ 4페이지에서 체크박스도 검증해야 함
+                if (step === totalSteps && !privacyCheckbox.checked) {
+                    privacyCheckbox.classList.add("is-invalid");
+                    isValid = false;
+                } else {
+                    privacyCheckbox.classList.remove("is-invalid");
+                }
+
+                return isValid;
+            }
+
+            // ✅ 체크박스 변경 시 에러 제거
+            privacyCheckbox.addEventListener("change", function () {
+                if (this.checked) {
+                    this.classList.remove("is-invalid");
+                }
+            });
+
+            // ✅ 입력 필드 값 변경 시 즉시 검증 (체크박스 제외)
+            document.querySelectorAll("input:not([type='checkbox']), select").forEach(field => {
+                field.addEventListener("input", function () {
+                    if (this.value.trim()) {
+                        this.classList.remove("is-invalid");
+                        this.classList.add("is-valid");
+                    } else {
+                        this.classList.add("is-invalid");
+                        this.classList.remove("is-valid");
+                    }
+                });
+            });
+
+            prevButton.addEventListener("click", function () {
+                if (currentStep > 1) {
+                    currentStep--;
+                    showStep(currentStep);
+                }
+            });
+
+            nextButton.addEventListener("click", function () {
+                // ✅ 4페이지에서도 검증 수행
+                if (!validateStep(currentStep)) {
+                    return;
+                }
+
+                if (currentStep < totalSteps) {
+                    currentStep++;
+                    showStep(currentStep);
+                } else {
+                    // ✅ 최종 제출 처리 (5페이지로 이동)
+                    document.querySelector(".step-4").classList.add("d-none");
+                    document.querySelector(".step-5").classList.remove("d-none");
+                    showStep(5);
+                }
+            });
+
+            showStep(currentStep);
         });
     </script>
     <script>
