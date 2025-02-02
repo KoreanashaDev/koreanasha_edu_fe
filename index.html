@@ -1036,6 +1036,7 @@
     <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
     <script src="assets/js/lang.js?v=20250203"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         let currentStep = 1;
         let preferred_service = "";
@@ -1314,7 +1315,7 @@
 
         async function apply() {
             try {
-                const apiBaseUrl = `${location.origin.replace(/:\d+$/, ":8000")}`; // 현재 URL의 포트를 8000으로 변경
+                const apiBaseUrl = `${location.origin.replace(/:\d+$/, ":8000")}`;
                 const apiUrl = `${apiBaseUrl}/api/edu/apply`;
 
                 const formData = {
@@ -1325,7 +1326,7 @@
                     gpa: parseFloat(document.getElementById("gpa").value) || null,
                     language_test_score: document.getElementById("language_score").value.trim(),
                     target_university_reason: document.getElementById("desired-university").value.trim(),
-                    admission_year: parseInt(document.getElementById("year").value) + "년",
+                    admission_year: parseInt(document.getElementById("year").value) + " year",
                     estimated_budget: parseFloat(document.getElementById("budget").value) || null,
                     desired_major: document.getElementById("major").value.trim(),
                     desired_city: document.getElementById("city").value.trim(),
@@ -1335,14 +1336,24 @@
                     previous_agency_experience: document.getElementById("experience").value,
                     contact_info: document.getElementById("contact").value.trim(),
                     referral_source: document.getElementById("source").value === "другой(기타) : "
-                        ? "другой(기타) : " + document.getElementById("other_source").value
+                        ? "Other: " + document.getElementById("other_source").value
                         : document.getElementById("source").value,
                     additional_comments: document.getElementById("inquiries").value.trim() || null,
                     maketing_consent: document.getElementById("marketing-consent").checked,
                     preferred_service: preferred_service,
                 };
 
-                // ✅ API 요청 (현재 `origin`을 기준으로 `8000` 포트 사용)
+                // ✅ Show loading state
+                Swal.fire({
+                    title: "Processing your application...",
+                    text: "Please wait while we process your request.",
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading();
+                    }
+                });
+
+                // ✅ API Request
                 const response = await fetch(apiUrl, {
                     method: "POST",
                     headers: {
@@ -1354,18 +1365,30 @@
                 const result = await response.json();
 
                 if (response.ok) {
+                    // ✅ 성공 시 `Swal` 없이 바로 완료 페이지로 이동
                     document.querySelector(".step-4").classList.add("d-none");
                     document.querySelector(".step-5").classList.remove("d-none");
                     showStep(5);
                 } else {
-                    console.error("❌ 신청 실패:", result);
-                    alert("신청에 실패했습니다. 오류: " + (result.detail || "알 수 없는 오류"));
+                    // ❌ 실패 시 `Swal` 알림 표시
+                    Swal.fire({
+                        title: "❌ Application Failed",
+                        text: result.detail || "An unknown error occurred.",
+                        icon: "error",
+                        confirmButtonText: "Try Again"
+                    });
                 }
             } catch (error) {
-                console.error("❌ 네트워크 오류:", error);
-                alert("서버와의 통신 중 문제가 발생했습니다.");
+                // 🚨 네트워크 오류 시 `Swal` 알림 표시
+                Swal.fire({
+                    title: "🚨 Network Error",
+                    text: "There was a problem connecting to the server. Please check your internet connection and try again.",
+                    icon: "warning",
+                    confirmButtonText: "OK"
+                });
             }
         }
+
     </script>
 </body>
 
