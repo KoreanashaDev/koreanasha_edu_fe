@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         why_koreanasha_section3_title: "Лучшие цены на рынке!",
                         why_koreanasha_section3_description: "Начните учёбу в Южной Корее — мы поможем вам сэкономить время и гарантируем поступление без стресса! Koreanasha предоставляет услуги премиум-класса по разумным ценам. Мы поможем вам получить максимально возможную стипендию и осуществить вашу мечту о обучении в Корее.",
 
-                        korean_universities_title: "<h2 class=\"mb-4\"><span class=\"text-blue\">Более 50ти Корейских университетов</span><br>ждут вашего поступления!</h2>",
+                        korean_universities_title: "<h2 class=\"mb-4\"><span class=\"text-blue\">Более 50 Корейских университетов</span><br>ждут вашего поступления!</h2>",
 
                         pricing_plans_subtitle: "Тарифы",
                         pricing_plans_title: "От подготовки до поступления,<br><span style=\"color: #FF4242;\">поступайте в Южную Корею вместе с Koreanasha</span>",
