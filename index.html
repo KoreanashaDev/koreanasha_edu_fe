@@ -1370,6 +1370,7 @@
                 });
 
                 const result = await response.json();
+                console.log(result);
 
                 if (response.ok) {
                     // ✅ 성공 시 `Swal` 없이 바로 완료 페이지로 이동
@@ -1387,6 +1388,7 @@
                 }
             } catch (error) {
                 // 🚨 네트워크 오류 시 `Swal` 알림 표시
+                console.log(error);
                 Swal.fire({
                     title: "🚨 Network Error",
                     text: "There was a problem connecting to the server. Please check your internet connection and try again.",
