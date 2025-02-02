@@ -13,7 +13,7 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css?v=20250202">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css?v=20250203">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/meanmenu.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/main.css?v=20250202">
+    <link rel="stylesheet" href="assets/css/main.css?v=20250203">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
@@ -87,7 +87,7 @@
                             </div>
 
                             <div class="header-btn only-pc">
-                                <a href="javascript:new bootstrap.Modal(document.getElementById('applyModal')).show();"
+                                <a href="javascript:preferred_service = ''; new bootstrap.Modal(document.getElementById('applyModal')).show();"
                                     class="header-btn theme-btn theme-btn-medium btn-blue text-white">
                                     <span id="header_btn"></span>
                                     <img src="assets/img/icon/arrow-right.png" alt="apply_btn" width="15"
@@ -119,11 +119,10 @@
                                 <div class="section-area">
                                     <h2 class="text-white text-shadow mb-3" id="banner_title"></h2>
                                     <p class="lead text-white text-shadow mb-5" id="banner_description"></p>
-                                    <a href="javascript:new bootstrap.Modal(document.getElementById('applyModal')).show();"
+                                    <a href="javascript:preferred_service = ''; new bootstrap.Modal(document.getElementById('applyModal')).show();"
                                         class="theme-btn theme-btn-big btn btn-primary btn-lg btn-blue text-white">
                                         <span id="banner_btn"></span>
-                                        <img src="assets/img/icon/arrow-right.png" alt="apply_btn" width="15"
-                                            class="ml-20"></a>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -366,7 +365,7 @@
 
                             <div class="header-btn theme-btn-medium theme-btn d-flex justify-content-center btn-blue text-white text-center"
                                 style="font-weight: 700; cursor: pointer;"
-                                onclick="javascript:new bootstrap.Modal(document.getElementById('applyModal')).show();">
+                                onclick="javascript:preferred_service = 'basic'; new bootstrap.Modal(document.getElementById('applyModal')).show();">
                                 <span id="pricing_plans_plan1_btn"></span>
                             </div>
                         </div>
@@ -431,7 +430,7 @@
 
                             <div class="header-btn theme-btn-medium theme-btn d-flex justify-content-center btn-blue text-white text-center"
                                 style="font-weight: 700; cursor: pointer;"
-                                onclick="javascript:new bootstrap.Modal(document.getElementById('applyModal')).show();">
+                                onclick="javascript:preferred_service = 'all_in_one'; new bootstrap.Modal(document.getElementById('applyModal')).show();">
                                 <span id="pricing_plans_plan2_btn"></span>
                             </div>
                         </div>
@@ -488,7 +487,7 @@
 
                             <div class="header-btn theme-btn-medium theme-btn d-flex justify-content-center btn-blue text-white text-center"
                                 style="font-weight: 700; cursor: pointer;"
-                                onclick="javascript:new bootstrap.Modal(document.getElementById('applyModal')).show();">
+                                onclick="javascript:preferred_service = 'premium'; new bootstrap.Modal(document.getElementById('applyModal')).show();">
                                 <span id="pricing_plans_plan3_btn"></span>
                             </div>
                         </div>
@@ -906,10 +905,13 @@
                             <label for="education" id="modal_label_education_title"></label>
                             <select id="education" class="form-control" required>
                                 <option value="" id="modal_label_education_option_default"></option>
-                                <option value="highschool" id="modal_label_education_option_highschool"></option>
-                                <option value="bachelor" id="modal_label_education_option_bachelor"></option>
-                                <option value="master" id="modal_label_education_option_master"></option>
-                                <option value="phd" id="modal_label_education_option_phd"></option>
+                                <option value="Старшая школа(고등학교)" id="modal_label_education_option_highschool">
+                                </option>
+                                <option value="Колледж/техникум(전문대)" id="modal_label_education_option_bachelor">
+                                </option>
+                                <option value="Бакалавриат(학사)" id="modal_label_education_option_master"></option>
+                                <option value="Магистратура/Докторантура(석사/박사)" id="modal_label_education_option_phd">
+                                </option>
                             </select>
 
                             <label for="gpa" id="modal_label_gpa_title"></label>
@@ -966,15 +968,16 @@
                             <label for="source" id="modal_label_source_title"></label>
                             <select id="source" class="form-control" required>
                                 <option value="" id="modal_label_source_option_default"></option>
-                                <option value="instagram" id="modal_label_source_option_instagram"></option>
-                                <option value="youtube" id="modal_label_source_option_youtube"></option>
-                                <option value="tiktok" id="modal_label_source_option_tiktok"></option>
+                                <option value="Инстаграм(인스타그램)" id="modal_label_source_option_instagram"></option>
+                                <option value="ютуб(유튜브)" id="modal_label_source_option_youtube"></option>
+                                <option value="Тик-ток(틱톡)" id="modal_label_source_option_tiktok"></option>
                                 <option value="facebook" id="modal_label_source_option_facebook"></option>
                                 <option value="VKontakte" id="modal_label_source_option_VKontakte"></option>
-                                <option value="telegram" id="modal_label_source_option_telegram"></option>
-                                <option value="recommendation" id="modal_label_source_option_recommendation"></option>
-                                <option value="search" id="modal_label_source_option_search"></option>
-                                <option value="other" id="modal_label_source_option_other"></option>
+                                <option value="Телеграм(텔레그램)" id="modal_label_source_option_telegram"></option>
+                                <option value="От друга(지인 추천)" id="modal_label_source_option_recommendation"></option>
+                                <option value="поиск в Интернете(인터넷 검색)" id="modal_label_source_option_search">
+                                </option>
+                                <option value="другой(기타) : " id="modal_label_source_option_other"></option>
                             </select>
 
                             <input type="text" id="other_source" class="form-control d-none mt-2" placeholder=""
@@ -1028,13 +1031,14 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/odometer.min.js"></script>
     <script src="assets/js/appear.min.js"></script>
-    <script src="assets/js/main.js?v=20250202"></script>
+    <script src="assets/js/main.js?v=20250203"></script>
     <script src="https://unpkg.com/i18next/i18next.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
-    <script src="assets/js/lang.js?v=20250202"></script>
+    <script src="assets/js/lang.js?v=20250203"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         let currentStep = 1;
+        let preferred_service = "";
         const totalSteps = 4;
 
         document.addEventListener("DOMContentLoaded", () => {
@@ -1277,16 +1281,13 @@
                     showStep(currentStep);
                 } else {
                     // ✅ 최종 제출 처리 (5페이지로 이동)
-                    document.querySelector(".step-4").classList.add("d-none");
-                    document.querySelector(".step-5").classList.remove("d-none");
-                    showStep(5);
+                    apply();
                 }
             });
 
             showStep(currentStep);
         });
-    </script>
-    <script>
+
         AOS.init({
             once: false // false로 설정하면 스크롤할 때마다 다시 실행됨
         });
@@ -1309,6 +1310,57 @@
                 }
             }, 50); // 50ms 딜레이 추가하여 레이아웃 안정화
         });
+
+
+        async function apply() {
+            try {
+                const formData = {
+                    name: document.getElementById("name").value.trim(),
+                    nationality: document.getElementById("nationality").value.trim(),
+                    age: parseInt(document.getElementById("age").value),
+                    education_level: document.getElementById("education").value,
+                    gpa: parseFloat(document.getElementById("gpa").value) || null,
+                    language_test_score: document.getElementById("language_score").value.trim(),
+                    target_university_reason: document.getElementById("desired-university").value.trim(),
+                    admission_year: parseInt(document.getElementById("year").value) + "년",
+                    estimated_budget: parseFloat(document.getElementById("budget").value) || null,
+                    desired_major: document.getElementById("major").value.trim(),
+                    desired_city: document.getElementById("city").value.trim(),
+                    university_priority: document.getElementById("important-factors").value.trim(),
+                    korea_study_reason: document.getElementById("reason").value.trim(),
+                    available_counseling_time: document.getElementById("consult-time").value.trim(),
+                    previous_agency_experience: document.getElementById("experience").value,
+                    contact_info: document.getElementById("contact").value.trim(),
+                    referral_source: document.getElementById("source").value == "другой(기타) : " ? "другой(기타) : " + document.getElementById("other_source").value : document.getElementById("source").value,
+                    additional_comments: document.getElementById("inquiries").value.trim() || null,
+                    maketing_consent: document.getElementById("marketing-consent").checked,
+                    preferred_service: preferred_service,
+                };
+
+                // ✅ API 요청
+                const response = await fetch("/api/edu/apply", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    document.querySelector(".step-4").classList.add("d-none");
+                    document.querySelector(".step-5").classList.remove("d-none");
+                    showStep(5);
+                } else {
+                    console.error("❌ 신청 실패:", result);
+                    alert("신청에 실패했습니다. 오류: " + (result.detail || "알 수 없는 오류"));
+                }
+            } catch (error) {
+                console.error("❌ 네트워크 오류:", error);
+                alert("서버와의 통신 중 문제가 발생했습니다.");
+            }
+        }
     </script>
 </body>
 
