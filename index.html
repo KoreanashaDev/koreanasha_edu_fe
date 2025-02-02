@@ -1168,7 +1168,7 @@
 
             document.getElementById("source").addEventListener("change", function () {
                 const otherInput = document.getElementById("other_source");
-                if (this.value === "other") {
+                if (this.value === "другой(기타) : ") {
                     otherInput.classList.remove("d-none");
                     otherInput.required = true;
                 } else {
@@ -1314,6 +1314,9 @@
 
         async function apply() {
             try {
+                const apiBaseUrl = `${location.origin.replace(/:\d+$/, ":8000")}`; // 현재 URL의 포트를 8000으로 변경
+                const apiUrl = `${apiBaseUrl}/api/edu/apply`;
+
                 const formData = {
                     name: document.getElementById("name").value.trim(),
                     nationality: document.getElementById("nationality").value.trim(),
@@ -1331,14 +1334,16 @@
                     available_counseling_time: document.getElementById("consult-time").value.trim(),
                     previous_agency_experience: document.getElementById("experience").value,
                     contact_info: document.getElementById("contact").value.trim(),
-                    referral_source: document.getElementById("source").value == "другой(기타) : " ? "другой(기타) : " + document.getElementById("other_source").value : document.getElementById("source").value,
+                    referral_source: document.getElementById("source").value === "другой(기타) : "
+                        ? "другой(기타) : " + document.getElementById("other_source").value
+                        : document.getElementById("source").value,
                     additional_comments: document.getElementById("inquiries").value.trim() || null,
                     maketing_consent: document.getElementById("marketing-consent").checked,
                     preferred_service: preferred_service,
                 };
 
-                // ✅ API 요청
-                const response = await fetch("/api/edu/apply", {
+                // ✅ API 요청 (현재 `origin`을 기준으로 `8000` 포트 사용)
+                const response = await fetch(apiUrl, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
