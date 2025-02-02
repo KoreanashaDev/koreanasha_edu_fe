@@ -1370,6 +1370,8 @@
                 console.log(result);
 
                 if (response.ok) {
+                    // ✅ 성공 시 `Swal` 닫기
+                    Swal.close();
                     // ✅ 성공 시 `Swal` 없이 바로 완료 페이지로 이동
                     document.querySelector(".step-4").classList.add("d-none");
                     document.querySelector(".step-5").classList.remove("d-none");
