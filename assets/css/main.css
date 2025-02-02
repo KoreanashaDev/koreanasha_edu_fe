@@ -167,6 +167,14 @@ html {
   display: block;
 }
 
+.only-t-and-p {
+  display: block;
+}
+
+.only-mobile {
+  display: none !important;
+}
+
 .fa-star {
   color: #FEE500 !important;
 }
@@ -23334,13 +23342,33 @@ only screen and (min-width: 768px) and (max-width: 991px),
     background-image: url('../../assets/img/banner/banner_m_c.webp');
   }
 
+  /* 기본 버튼 스타일 */
+#banner_btn {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* ✅ 모바일에서 버튼 숨김 (`d-none` 대체) */
+@media (max-width: 575px) {
+  #banner_btn.hidden {
+      display: none !important;
+  }
+}
+
   .banner-content .section-area {
     position: absolute;
-    bottom: 100px;
+    bottom: 70px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     width: 100%;
+  }
+
+  .banner_btn {
+    position: fixed;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   }
 
   .lead {
@@ -23388,6 +23416,14 @@ only screen and (min-width: 768px) and (max-width: 991px),
     display: none;
   }
 
+  .only-t-and-p {
+    display: none;
+  }
+
+  .only-mobile {
+    display: block !important;
+  }
+
   .fa-bars {
     font-size: 18px;
   }
@@ -23416,6 +23452,14 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
   .only-pc {
     display: none;
+  }
+
+  .only-t-and-p {
+    display: block;
+  }
+
+  .only-mobile {
+    display: none !important;
   }
 
   .h2_blog-content {

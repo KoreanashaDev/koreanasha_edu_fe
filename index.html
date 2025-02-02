@@ -120,10 +120,14 @@
                                     <h2 class="text-white text-shadow mb-3" id="banner_title"></h2>
                                     <p class="lead text-white text-shadow mb-5" id="banner_description"></p>
                                     <a href="javascript:preferred_service = ''; new bootstrap.Modal(document.getElementById('applyModal')).show();"
-                                        class="theme-btn theme-btn-big btn btn-primary btn-lg btn-blue text-white">
-                                        <span id="banner_btn"></span>
+                                        class="theme-btn theme-btn-big btn btn-primary btn-lg btn-blue text-white"
+                                        id="banner_btn">
                                     </a>
                                 </div>
+                                <a href="javascript:preferred_service = ''; new bootstrap.Modal(document.getElementById('applyModal')).show();"
+                                        class="theme-btn theme-btn-big btn btn-primary btn-lg btn-blue text-white banner_btn only-mobile"
+                                        id="banner_btn_only_mobile">
+                                    </a>
                             </div>
                         </div>
                     </div>
@@ -1388,6 +1392,27 @@
                 });
             }
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const bannerBtn = document.getElementById("banner_btn");
+    let lastScrollY = 0;
+
+    function toggleButtonVisibility() {
+        const currentScrollY = window.scrollY;
+
+        if (window.innerWidth <= 575) { // ✅ 모바일 화면에서만 적용
+            if (currentScrollY > 10) { 
+                bannerBtn.classList.add("hidden"); // ✅ 스크롤을 내리면 숨김
+            } else {
+                bannerBtn.classList.remove("hidden"); // ✅ 맨 위로 올라오면 다시 표시
+            }
+        }
+    }
+
+    window.addEventListener("scroll", toggleButtonVisibility);
+    toggleButtonVisibility(); // ✅ 초기 로드 시 확인
+});
+
 
     </script>
 </body>

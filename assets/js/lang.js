@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         banner_title: "한국 유학 쉽습니다!",
                         banner_description: "당신의 꿈을 현실로 만들어 드립니다.<br>한국 유학의 첫걸음, 무료 상담으로 시작하세요!",
                         banner_btn: "무료 상담받기",
+                        banner_btn_only_mobile: "무료 상담받기",
 
                         about_us_subtitle: "유학원 소개",
                         about_us_title: "당신의 한국 유학 꿈,<br><span class=\"text-blue\">Koreanasha</span>와 함께 현실로!",
@@ -178,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         other_source: "기타 입력",
                         language_score: "증명서 없을 시 현재 준비 과정 작성",
 
-                        language_flag: "<img src=\"assets/img/icon/korea_flag_icon.svg\" width=\"24\" height=\"24\" style=\"margin-right: 3px;\" class=\"flag_icon\"><span>한국어</span>",
+                        language_flag: "<img src=\"assets/img/icon/korea_flag_icon.svg\" width=\"24\" height=\"24\" style=\"margin-right: 3px;\" class=\"flag_icon\"><span class='only-t-and-p'>한국어</span>",
                         prevStep: "< 이전",
                         nextStep: "다음 >",
                         submit: "제출하기"
@@ -197,6 +198,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         banner_title: "Учеба в Корее - это просто!",
                         banner_description: "Поможем воплотить ваши мечты в реальность.<br>Начните свой первый шаг к мечте с бесплатной консультации!",
                         banner_btn: "Бесплатная консультация",
+                        banner_btn_only_mobile: "Бесплатная консультация",
 
                         about_us_subtitle: "О компании",
                         about_us_title: "Легкий путь к учебе в Корее!<br><span class=\"text-blue\">Персональная</span> поддержка с <span class=\"text-blue\">Koreanasha!</span>",
@@ -358,7 +360,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         other_source: "Введите другое",
                         language_score: "Укажите текущий процесс подготовки, если нет сертификата",
 
-                        language_flag: "<img src=\"assets/img/icon/russia_flag_icon.svg\" width=\"24\" height=\"24\" style=\"margin-right: 3px;\" class=\"flag_icon\"><span>Русский</span>",
+                        language_flag: "<img src=\"assets/img/icon/russia_flag_icon.svg\" width=\"24\" height=\"24\" style=\"margin-right: 3px;\" class=\"flag_icon\"><span class='only-t-and-p'>Русский</span>",
                         prevStep: "< Назад",
                         nextStep: "Далее >",
                         submit: "Отправить"
