@@ -109,7 +109,8 @@ html {
   background-repeat: no-repeat;
   background-position: right 12px center;
   background-size: 16px;
-  padding-right: 36px; /* 화살표 위치 조정 */
+  padding-right: 36px;
+  /* 화살표 위치 조정 */
   cursor: pointer;
 }
 
@@ -125,7 +126,8 @@ html {
 }
 
 /* 이전, 다음 버튼 스타일 */
-.prev-btn, .next-btn {
+.prev-btn,
+.next-btn {
   background: none;
   border: none;
   color: #697077;
@@ -142,7 +144,8 @@ html {
 }
 
 /* 버튼 호버 효과 */
-.prev-btn:hover, .next-btn:hover {
+.prev-btn:hover,
+.next-btn:hover {
   color: #21272A;
 }
 
@@ -329,6 +332,12 @@ body {
   color: #A4A7BE !important;
   font-weight: 500;
   font-size: 20px !important;
+}
+
+.flag_icon {
+  min-width: 1px;
+  min-height: 1px;
+  object-fit: cover;
 }
 
 .price {

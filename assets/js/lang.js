@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         other_source: "기타 입력",
                         language_score: "증명서 없을 시 현재 준비 과정 작성",
 
-                        language_flag: "<img src=\"assets/img/icon/korea.svg\" width=\"24\" height=\"24\" style=\"margin-right: 3px;\"><span>한국어</span>",
+                        language_flag: "<img src=\"assets/img/icon/korea_flag_icon.svg\" width=\"24\" height=\"24\" style=\"margin-right: 3px;\" class=\"flag_icon\"><span>한국어</span>",
 
                     }
                 },
@@ -352,7 +352,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         other_source: "Введите другое",
                         language_score: "Укажите текущий процесс подготовки, если нет сертификата",
 
-                        language_flag: "<img src=\"assets/img/icon/russia.svg\" width=\"24\" height=\"24\" style=\"margin-right: 3px;\"><span>Русский</span>",
+                        language_flag: "<img src=\"assets/img/icon/russia_flag_icon.svg\" width=\"24\" height=\"24\" style=\"margin-right: 3px;\" class=\"flag_icon\"><span>Русский</span>",
 
                     }
                 }
