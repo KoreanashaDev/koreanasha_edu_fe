@@ -1327,11 +1327,11 @@
                     nationality: document.getElementById("nationality").value.trim(),
                     age: parseInt(document.getElementById("age").value),
                     education_level: document.getElementById("education").value,
-                    gpa: parseFloat(document.getElementById("gpa").value) || null,
+                    gpa: document.getElementById("gpa").value,
                     language_test_score: document.getElementById("language_score").value.trim(),
                     target_university_reason: document.getElementById("desired-university").value.trim(),
-                    admission_year: parseInt(document.getElementById("year").value) + " year",
-                    estimated_budget: parseFloat(document.getElementById("budget").value) || null,
+                    admission_year: parseInt(document.getElementById("year").value) + "년",
+                    estimated_budget: document.getElementById("budget").value,
                     desired_major: document.getElementById("major").value.trim(),
                     desired_city: document.getElementById("city").value.trim(),
                     university_priority: document.getElementById("important-factors").value.trim(),
@@ -1344,8 +1344,11 @@
                         : document.getElementById("source").value,
                     additional_comments: document.getElementById("inquiries").value.trim() || null,
                     maketing_consent: document.getElementById("marketing-consent").checked,
-                    preferred_service: preferred_service,
                 };
+
+                if(preferred_service !== "") {
+                    formData['preferred_service'] = preferred_service
+                }
 
                 // ✅ Show loading state
                 Swal.fire({
