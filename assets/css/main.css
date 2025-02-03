@@ -23345,14 +23345,6 @@ only screen and (min-width: 768px) and (max-width: 991px),
   /* 기본 버튼 스타일 */
   #banner_btn {
     visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  /* ✅ 모바일에서 버튼 숨김 (`d-none` 대체) */
-  @media (max-width: 575px) {
-    #banner_btn.hidden {
-      display: none !important;
-    }
   }
 
   .banner-content .section-area {
