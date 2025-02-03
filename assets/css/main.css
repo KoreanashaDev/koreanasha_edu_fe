@@ -23344,6 +23344,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
   /* 기본 버튼 스타일 */
   #banner_btn {
+    visibility: hidden;
     transition: opacity 0.3s ease-in-out;
   }
 
