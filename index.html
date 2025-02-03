@@ -1379,8 +1379,8 @@
 
                 // ✅ Show loading state
                 Swal.fire({
-                    title: "Processing your application...",
-                    text: "Please wait while we process your request.",
+                    title: i18next.t("swal_loading_title"),
+                    text: i18next.t("swal_loading_description"),
                     allowOutsideClick: false,
                     didOpen: () => {
                         Swal.showLoading();
@@ -1409,20 +1409,20 @@
                 } else {
                     // ❌ 실패 시 `Swal` 알림 표시
                     Swal.fire({
-                        title: "❌ Application Failed",
-                        text: result.detail || "An unknown error occurred.",
+                        title: i18next.t("swal_error_title"),
+                        text: i18next.t("swal_error_description"),
                         icon: "error",
-                        confirmButtonText: "Try Again"
+                        confirmButtonText: i18next.t("swal_error_btn")
                     });
                 }
             } catch (error) {
                 // 🚨 네트워크 오류 시 `Swal` 알림 표시
                 console.log(error);
                 Swal.fire({
-                    title: "🚨 Network Error",
-                    text: "There was a problem connecting to the server. Please check your internet connection and try again.",
+                    title: i18next.t("swal_network_error_title"),
+                    text: i18next.t("swal_network_error_description"),
                     icon: "warning",
-                    confirmButtonText: "OK"
+                    confirmButtonText: i18next.t("swal_network_error_btn")
                 });
             }
         }

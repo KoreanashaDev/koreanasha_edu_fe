@@ -182,7 +182,16 @@ document.addEventListener("DOMContentLoaded", function () {
                         language_flag: "<img src=\"assets/img/icon/korea_flag_icon.svg\" width=\"24\" height=\"24\" style=\"margin-right: 3px;\" class=\"flag_icon\"><span class='only-t-and-p'>한국어</span>",
                         prevStep: "< 이전",
                         nextStep: "다음 >",
-                        submit: "제출하기"
+                        submit: "제출하기",
+
+                        swal_loading_title: "신청을 처리하고 있어요!",
+                        swal_loading_description: "잠시만 기다려 주세요. 곧 완료됩니다.😊",
+                        swal_error_title: "❌ 신청 처리 실패",
+                        swal_error_description: "알 수 없는 오류가 발생했어요. 다시 시도해주세요!",
+                        swal_network_error_title: "🚨 네트워크 오류",
+                        swal_network_error_description: "서버와 연결하는 데 문제가 발생했어요. 인터넷 연결을 확인한 후 다시 시도해 주세요.",
+                        swal_error_btn: "확인",
+                        swal_network_error_btn: "확인",
                     }
                 },
                 ru: {
@@ -363,7 +372,15 @@ document.addEventListener("DOMContentLoaded", function () {
                         language_flag: "<img src=\"assets/img/icon/russia_flag_icon.svg\" width=\"24\" height=\"24\" style=\"margin-right: 3px;\" class=\"flag_icon\"><span class='only-t-and-p'>Русский</span>",
                         prevStep: "< Назад",
                         nextStep: "Далее >",
-                        submit: "Отправить"
+                        submit: "Отправить",
+                        swal_loading_title: "Обрабатываем вашу заявку!",
+                        swal_loading_description: "Пожалуйста, подождите немного, скоро всё будет готово.😊",
+                        swal_error_title: "❌ Ошибка обработки заявки",
+                        swal_error_description: "Произошла неизвестная ошибка. Попробуйте ещё раз!",
+                        swal_network_error_title: "🚨 Ошибка сети",
+                        swal_network_error_description: "Возникла проблема с подключением к серверу. Проверьте интернет-соединение и попробуйте снова.",
+                        swal_error_btn: "ОК",
+                        swal_network_error_btn: "ОК",
                     }
                 }
             }
