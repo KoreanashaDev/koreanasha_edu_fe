@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         modal_label_budget_title: "Предполагаемые расходы на обучение",
                         modal_label_city_title: "Желаемый город",
                         modal_label_important_factors_title: "Что важно при выборе университета?",
-                        modal_label_reason_title: "Бюджет на обучение в год",
+                        modal_label_reason_title: "Почему хотите поступить в корейский университет?",
                         modal_label_consult_time_title: "Желаемое время консультации",
                         modal_label_experience_title: "Был ли у вас опыт консультаций с другими агентствами?",
                         modal_label_experience_option_default: "Выберите вариант",
