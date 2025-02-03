@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         faq_a9: "네, 고등학교나 전문대를 졸업하고 바로 한국 대학에 갈 수 있습니다.",
                         faq_a10: "한국에서 취업은 전공에 따라 다릅니다. 공학, 비즈니스 분야는 비교적으로 쉬우나 인문학 분야는 어려울 수 있습니다.",
 
-                        footer_description: "<strong>대표</strong>: 김예찬<br><strong>이메일</strong>: kimych072362@gmail.com<br><strong>사업자등록번호</strong>: 876-81-00110",
+                        footer_description: "<strong>대표</strong>: 김예찬<br><strong>이메일</strong>: kimych072362@gmail.com<br><strong>사업자등록번호</strong>: 139-74-00672",
 
                         modal_title: "상담글을 작성하고<br>무료로 한국대학 컨설팅을 받아보세요.",
                         modal_label_name_title: "이름",
@@ -320,7 +320,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         faq_a9: "Да, после окончания 11 класса или спо можно сразу поступить в корейские университеты.",
                         faq_a10: "Процесс и результаты трудоустройства зависят от специальности, которую Вы выбрали в университете.",
 
-                        footer_description: "<strong>Генеральный директор</strong>: Ким Ечан<br><strong>Электронная почта</strong>: kimych072362@gmail.com<br><strong>Регистрационный номер предприятия</strong>: 876-81-00110",
+                        footer_description: "<strong>Генеральный директор</strong>: Ким Ечан<br><strong>Электронная почта</strong>: kimych072362@gmail.com<br><strong>Регистрационный номер предприятия</strong>: 139-74-00672",
 
                         modal_title: "Заполните заявку<br>и получите бесплатную консультацию по корейским университетам.",
                         modal_label_name_title: "Имя",
