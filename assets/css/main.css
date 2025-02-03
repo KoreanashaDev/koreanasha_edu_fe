@@ -372,7 +372,7 @@ body {
 .flag_icon {
   min-width: 1px;
   min-height: 1px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .price {
