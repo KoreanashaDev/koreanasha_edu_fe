@@ -23424,6 +23424,10 @@ only screen and (min-width: 768px) and (max-width: 991px),
   .h2_blog-content {
     padding: 20px;
   }
+
+  .footer-mobile-bottom {
+    margin-bottom: 100px !important;
+  }
 }
 
 @media only screen and (min-width: 575px) and (max-width: 1199px) {
