@@ -48,6 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         pricing_plans_title: "준비부터 입학까지,<br><span style=\"color: #FF4242;\">한국 유학은 Koreanasha</span>",
                         pricing_plans_description: "한국 대학 입학을 꿈꾸는 여러분을 위해 세 가지 요금제를 준비했습니다.",
 
+                        pills_plan_category_1_tab: "한국 대학 입학",
+                        pills_plan_category_2_tab: "단기 어학 연수",
+
                         pricing_plans_plan1_title: "베이직 플랜",
                         pricing_plans_plan1_subtitle: "어학원, 학사 과정",
                         pricing_plans_plan1_description1: "1개 대학교 선정 + 서류 제출",
@@ -81,6 +84,14 @@ document.addEventListener("DOMContentLoaded", function () {
                         pricing_plans_plan3_description7: "은행 잔고증명서 작성 지원",
                         pricing_plans_plan3_description8: "비자 신청 서류 준비 지원",
                         pricing_plans_plan3_btn: "무료 상담받기",
+
+                        pricing_plans_plan4_title: "단기 어학 연수 과정",
+                        pricing_plans_plan4_subtitle: "비자 없이 수강 가능, 1주 ~ 2개월 과정",
+                        pricing_plans_plan4_description1: "3개의 어학원 선택",
+                        pricing_plans_plan4_description2: "서류 준비 및 제출",
+                        pricing_plans_plan4_description3: "K-ETA 신청 지원",
+                        pricing_plans_plan4_description4: "컨설턴트와 채팅 지원",
+                        pricing_plans_plan4_btn: "무료 상담받기",
 
                         koreanasha_services_subtitle: "서비스 소개",
                         koreanasha_services_title: "유학의 모든 순간,<br>Koreanasha가 <span class=\"text-blue\">완벽하게 함께</span>합니다.",
@@ -236,6 +247,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         pricing_plans_title: "От подготовки до поступления,<br><span style=\"color: #FF4242;\">поступайте в Южную Корею вместе с Koreanasha</span>",
                         pricing_plans_description: "Для тех кто мечтает поступить в корейский университет, мы подготовили три тарифных плана, которые соответствуют вашим потребностям.",
 
+                        pills_plan_category_1_tab: "Поступление в корейские вузы",
+                        pills_plan_category_2_tab: "Краткосрочное обучение",
+
                         pricing_plans_plan1_title: "Базовый план",
                         pricing_plans_plan1_subtitle: "Языковая школа, программа бакалавриата",
                         pricing_plans_plan1_description1: "Выбор 1 университета + подача документов",
@@ -269,6 +283,14 @@ document.addEventListener("DOMContentLoaded", function () {
                         pricing_plans_plan3_description7: "Помощь в оформлении справки о состоянии банковского счета",
                         pricing_plans_plan3_description8: "Помощь в подготовке документов для визы",
                         pricing_plans_plan3_btn: "Бесплатная консультация",
+
+                        pricing_plans_plan4_title: "Краткосрочный курс языкового обучения",
+                        pricing_plans_plan4_subtitle: "Возможность обучения без визы, продолжительность от 1 недели до 2 месяцев",
+                        pricing_plans_plan4_description1: "выбор 3 языковых школ",
+                        pricing_plans_plan4_description2: "подготовка и подача документов",
+                        pricing_plans_plan4_description3: "помощь в оформлении КЕТА",
+                        pricing_plans_plan4_description4: "чат с куратором",
+                        pricing_plans_plan4_btn: "Бесплатная консультация",
 
                         koreanasha_services_subtitle: "Услуги",
                         koreanasha_services_title: "<span class=\"text-blue\">Мы — одна команда!</span><br>Вместе с вами поможем достичь вашей мечты!",

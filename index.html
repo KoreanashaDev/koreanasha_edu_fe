@@ -32,7 +32,7 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css?v=20250209">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css?v=20250210">
     <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/meanmenu.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/main.css?v=20250209">
+    <link rel="stylesheet" href="assets/css/main.css?v=20250210">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
@@ -354,164 +354,226 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-12" data-aos="fade-right" data-aos-duration="1000">
-                        <div class="h2_price-item mb-30">
-                            <div class="tag-discount background_blue">
-                                <div id="experiment-premium-installment-discount-rate" class="text-block-4">20%<br>OFF
-                                </div>
-                            </div>
-                            <div class="h2_price-item-title">
-                                <h5 id="pricing_plans_plan1_title"></h5>
-                                <p id="pricing_plans_plan1_subtitle"></p>
-                            </div>
-                            <div class="h2_price-amount mb-4">
-                                <div class="text-end">
-                                    <del class="del">$750</del>
-                                </div>
-                                <div class="h2_price-amount-info">
-                                    <p class="get-off-text">20%↓</p>
-                                    <p class="price">$600</p>
-                                </div>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan1_description1"></span>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan1_description2"></span>
-                            </div>
-                            <div class="plan-box mb-5">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan1_description3"></span>
-                            </div>
-
-                            <div class="header-btn theme-btn-medium theme-btn d-flex justify-content-center btn-blue text-white text-center"
-                                style="font-weight: 700; cursor: pointer;"
-                                onclick="javascript:preferred_service = 'basic'; new bootstrap.Modal(document.getElementById('applyModal')).show();">
-                                <span id="pricing_plans_plan1_btn"></span>
-                            </div>
+                    <div class="col-xl-12">
+                        <div class="h3_course-tab mb-40">
+                            <ul class="nav nav-pills" id="pills-tab" role="tablist" data-aos="fade-up" data-aos-duration="1000">
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link active" id="pills_plan_category_1_tab" data-bs-toggle="pill" data-bs-target="#pills-plan-category-1" type="button" role="tab" aria-controls="pills-plan-category-1" aria-selected="true">
+                                    See All
+                                  </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link" id="pills_plan_category_2_tab" data-bs-toggle="pill" data-bs-target="#pills-plan-category-2" type="button" role="tab" aria-controls="pills-plan-category-2" aria-selected="false">Trending</button>
+                                </li>
+                            </ul>                                      
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-12" data-aos="fade-up" data-aos-duration="1000"
-                        data-aos-delay="200">
-                        <div class="h2_price-item h2_price-item-highlight mb-30">
-                            <div class="tag-discount">
-                                <div id="experiment-plus-installment-discount-rate" class="text-block-4">15%<br>OFF
+                </div>
+                <div class="h3_course-wrap">
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-plan-category-1" role="tabpanel" aria-labelledby="pills_plan_category_1_tab" tabindex="0">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-12" data-aos="fade-right" data-aos-duration="1000">
+                                    <div class="h2_price-item mb-30">
+                                        <div class="tag-discount background_blue">
+                                            <div id="experiment-premium-installment-discount-rate" class="text-block-4">20%<br>OFF
+                                            </div>
+                                        </div>
+                                        <div class="h2_price-item-title">
+                                            <h5 id="pricing_plans_plan1_title"></h5>
+                                            <p id="pricing_plans_plan1_subtitle"></p>
+                                        </div>
+                                        <div class="h2_price-amount mb-4">
+                                            <div class="text-end">
+                                                <del class="del">$750</del>
+                                            </div>
+                                            <div class="h2_price-amount-info">
+                                                <p class="get-off-text">20%↓</p>
+                                                <p class="price">$600</p>
+                                            </div>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan1_description1"></span>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan1_description2"></span>
+                                        </div>
+                                        <div class="plan-box mb-5">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan1_description3"></span>
+                                        </div>
+            
+                                        <div class="header-btn theme-btn-medium theme-btn d-flex justify-content-center btn-blue text-white text-center"
+                                            style="font-weight: 700; cursor: pointer;"
+                                            onclick="javascript:preferred_service = 'basic'; new bootstrap.Modal(document.getElementById('applyModal')).show();">
+                                            <span id="pricing_plans_plan1_btn"></span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <span class="best-plan-btn mb-3">BEST</span>
-                            <div class="h2_price-item-title">
-                                <h5 class="mt-3" id="pricing_plans_plan2_title"></h5>
-                                <p id="pricing_plans_plan2_subtitle"></p>
-                            </div>
-                            <div class="h2_price-amount">
-                                <div class="text-end">
-                                    <del class="del">$1000</del>
+                                <div class="col-xl-4 col-lg-4 col-md-12" data-aos="fade-up" data-aos-duration="1000"
+                                    data-aos-delay="200">
+                                    <div class="h2_price-item h2_price-item-highlight mb-30">
+                                        <div class="tag-discount">
+                                            <div id="experiment-plus-installment-discount-rate" class="text-block-4">15%<br>OFF
+                                            </div>
+                                        </div>
+                                        <span class="best-plan-btn mb-3">BEST</span>
+                                        <div class="h2_price-item-title">
+                                            <h5 class="mt-3" id="pricing_plans_plan2_title"></h5>
+                                            <p id="pricing_plans_plan2_subtitle"></p>
+                                        </div>
+                                        <div class="h2_price-amount">
+                                            <div class="text-end">
+                                                <del class="del">$1000</del>
+                                            </div>
+                                            <div class="h2_price-amount-info">
+                                                <p class="get-off-text">15%↓</p>
+                                                <p class="price">$850</p>
+                                            </div>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan2_description1"></span>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan2_description2"></span>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan2_description3"></span>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan2_description4"></span>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan2_description5"></span>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan2_description6"></span>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan2_description8"></span>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan2_description9"></span>
+                                        </div>
+                                        <div class="plan-box mb-5">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan2_description10"></span>
+                                        </div>
+            
+                                        <div class="header-btn theme-btn-medium theme-btn d-flex justify-content-center btn-blue text-white text-center"
+                                            style="font-weight: 700; cursor: pointer;"
+                                            onclick="javascript:preferred_service = 'all_in_one'; new bootstrap.Modal(document.getElementById('applyModal')).show();">
+                                            <span id="pricing_plans_plan2_btn"></span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="h2_price-amount-info">
-                                    <p class="get-off-text">15%↓</p>
-                                    <p class="price">$850</p>
+                                <div class="col-xl-4 col-lg-4 col-md-12" data-aos="fade-left" data-aos-duration="1000"
+                                    data-aos-delay="400">
+                                    <div class="h2_price-item mb-30">
+                                        <div class="tag-discount background_blue">
+                                            <div id="experiment-premium-installment-discount-rate" class="text-block-4">21%<br>OFF
+                                            </div>
+                                        </div>
+                                        <span class="max-get-off-btn mb-3" id="pricing_plans_plan3_subtitle"></span>
+                                        <div class="h2_price-item-title">
+                                            <h5 class="mt-3" id="pricing_plans_plan3_title"></h5>
+                                            <p id="pricing_plans_plan3_description"></p>
+                                        </div>
+                                        <div class="h2_price-amount">
+                                            <div class="text-end">
+                                                <del class="del">$820</del>
+                                            </div>
+                                            <div class="h2_price-amount-info">
+                                                <p class="get-off-text">21%↓</p>
+                                                <h2 class="price">$650</h2>
+                                            </div>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan3_description1"></span>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan3_description2"></span>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan3_description3"></span>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan3_description4"></span>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan3_description5"></span>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan3_description6"></span>
+                                        </div>
+                                        <div class="plan-box mb-5">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan3_description8"></span>
+                                        </div>
+            
+                                        <div class="header-btn theme-btn-medium theme-btn d-flex justify-content-center btn-blue text-white text-center"
+                                            style="font-weight: 700; cursor: pointer;"
+                                            onclick="javascript:preferred_service = 'premium'; new bootstrap.Modal(document.getElementById('applyModal')).show();">
+                                            <span id="pricing_plans_plan3_btn"></span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan2_description1"></span>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan2_description2"></span>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan2_description3"></span>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan2_description4"></span>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan2_description5"></span>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan2_description6"></span>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan2_description8"></span>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan2_description9"></span>
-                            </div>
-                            <div class="plan-box mb-5">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan2_description10"></span>
-                            </div>
-
-                            <div class="header-btn theme-btn-medium theme-btn d-flex justify-content-center btn-blue text-white text-center"
-                                style="font-weight: 700; cursor: pointer;"
-                                onclick="javascript:preferred_service = 'all_in_one'; new bootstrap.Modal(document.getElementById('applyModal')).show();">
-                                <span id="pricing_plans_plan2_btn"></span>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-12" data-aos="fade-left" data-aos-duration="1000"
-                        data-aos-delay="400">
-                        <div class="h2_price-item mb-30">
-                            <div class="tag-discount background_blue">
-                                <div id="experiment-premium-installment-discount-rate" class="text-block-4">21%<br>OFF
+                        <div class="tab-pane fade" id="pills-plan-category-2" role="tabpanel" aria-labelledby="pills_plan_category_2_tab" tabindex="0">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-xl-6 col-lg-6 col-md-12" data-aos="fade-up" data-aos-duration="1000"
+                                    data-aos-delay="200">
+                                    <div class="h2_price-item h2_price-item-highlight mb-30">
+                                        <div class="h2_price-item-title">
+                                            <h5 class="mt-3" id="pricing_plans_plan4_title"></h5>
+                                            <p id="pricing_plans_plan4_subtitle"></p>
+                                        </div>
+                                        <div class="h2_price-amount">
+                                            <div class="h2_price-amount-info">
+                                                <p class="price">$400</p>
+                                            </div>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan4_description1"></span>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan4_description2"></span>
+                                        </div>
+                                        <div class="plan-box mb-3">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan4_description3"></span>
+                                        </div>
+                                        <div class="plan-box mb-5">
+                                            <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
+                                            <span id="pricing_plans_plan4_description4"></span>
+                                        </div>
+            
+                                        <div class="header-btn theme-btn-medium theme-btn d-flex justify-content-center btn-blue text-white text-center"
+                                            style="font-weight: 700; cursor: pointer;"
+                                            onclick="javascript:preferred_service = 'short_term_language_program'; new bootstrap.Modal(document.getElementById('applyModal')).show();">
+                                            <span id="pricing_plans_plan4_btn"></span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <span class="max-get-off-btn mb-3" id="pricing_plans_plan3_subtitle"></span>
-                            <div class="h2_price-item-title">
-                                <h5 class="mt-3" id="pricing_plans_plan3_title"></h5>
-                                <p id="pricing_plans_plan3_description"></p>
-                            </div>
-                            <div class="h2_price-amount">
-                                <div class="text-end">
-                                    <del class="del">$820</del>
-                                </div>
-                                <div class="h2_price-amount-info">
-                                    <p class="get-off-text">21%↓</p>
-                                    <h2 class="price">$650</h2>
-                                </div>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan3_description1"></span>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan3_description2"></span>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan3_description3"></span>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan3_description4"></span>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan3_description5"></span>
-                            </div>
-                            <div class="plan-box mb-3">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan3_description6"></span>
-                            </div>
-                            <div class="plan-box mb-5">
-                                <img src="assets/img/icon/check_circle_outline.svg" class="mr-10" width="24">
-                                <span id="pricing_plans_plan3_description8"></span>
-                            </div>
-
-                            <div class="header-btn theme-btn-medium theme-btn d-flex justify-content-center btn-blue text-white text-center"
-                                style="font-weight: 700; cursor: pointer;"
-                                onclick="javascript:preferred_service = 'premium'; new bootstrap.Modal(document.getElementById('applyModal')).show();">
-                                <span id="pricing_plans_plan3_btn"></span>
                             </div>
                         </div>
                     </div>
@@ -1054,10 +1116,10 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/odometer.min.js"></script>
     <script src="assets/js/appear.min.js"></script>
-    <script src="assets/js/main.js?v=20250209"></script>
+    <script src="assets/js/main.js?v=20250210"></script>
     <script src="https://unpkg.com/i18next/i18next.js"></script>
     <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
-    <script src="assets/js/lang.js?v=20250209"></script>
+    <script src="assets/js/lang.js?v=20250210"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Google tag (gtag.js) -->
