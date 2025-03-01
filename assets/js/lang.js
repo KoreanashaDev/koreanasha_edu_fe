@@ -370,7 +370,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         pills_plan_category_1_tab: "Поступление в университеты Кореи",
                         pills_plan_category_2_tab: "VVIP план",
-                        pills_plan_category_3_tab: "Дополнительные опции покупки",
+                        pills_plan_category_3_tab: "Дополнительные услуги",
                         pills_plan_category_4_tab: "Краткосрочные языковые курсы",
 
                         pricing_plans_plan1_title: "Базовый план",
@@ -486,7 +486,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         pricing_plans_plan5_description13: "Приглашение в клуб студентов Koreanasha",
                         pricing_plans_plan5_description14: "Собственная система стипендий",
                         pricing_plans_plan5_btn: "Заявка",
-                        pricing_plans_plan5_description1_more: "Консультация (аудио/видео) без ограничения по времени. Объясняется весь процесс поступления, обсуждаются вопросы и даются персонализированные рекомендации.",
+                        pricing_plans_plan5_description1_more: "Онлайн консультация без ограничения по времени. Объясняется весь процесс поступления, обсуждаются вопросы и даются  персонализированные рекомендации.",
                         pricing_plans_plan5_description2_more: "Рекомендуем все возможные университеты, учитывая специальность и предпочтительное место проживания, а затем выбираем наиболее подходящий. (при подаче в 2 и более университета +50$ за каждый университет).",
                         pricing_plans_plan5_description3_more: "Предоставление всей информации касательно поступления: список документов, сроки подачи, стоимость обучения, порядок действий и советы по подготовке.",
                         pricing_plans_plan5_description4_more: "Помощь в написании самопредставления и учебного плана:  подсказки и советы, план написания эссе, примеры эссе,  исправление содержания, исправление лексических и  грамматических ошибок ментором, доведение эссе до идеала.",
@@ -501,7 +501,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         pricing_plans_plan5_description13_more: "Приглашение в клуб студентов Koreanasha для знакомства, общения и нетворкинга. Активный чат и регулярные встречи для обмена полезной информацией.",
                         pricing_plans_plan5_description14_more: "Предоставляем поддержку талантливым студентам через нашу систему стипендий Koreanasha.",
 
-                        pricing_plans_plan6_title: "Дополнительные опции покупки",
+                        pricing_plans_plan6_title: "Дополнительные услуги",
                         pricing_plans_plan6_subtitle: "Дополнительные услуги, которые можно добавить к вашему плану.",
                         pricing_plans_plan6_description1: "Продление консультации на 30 минут (+$20)",
                         pricing_plans_plan6_description2: "Дополнительно 5 вариантов университетов на выбор (+$30)",
