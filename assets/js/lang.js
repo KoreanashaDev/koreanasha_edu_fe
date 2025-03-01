@@ -396,7 +396,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         pricing_plans_plan1_description10_more: "Предоставляем поддержку талантливым студентам через нашу систему стипендий Koreanasha.",
 
 
-                        pricing_plans_plan2_title: "План 'Все включено",
+                        pricing_plans_plan2_title: "План Все включено",
                         pricing_plans_plan2_subtitle: "Основано на языковой школе.<br>Для бакалавриата/магистратуры доплата $40.",
                         pricing_plans_plan2_description1: "Первичная консультация (90 минут)",
                         pricing_plans_plan2_description2: "Подбор 7 университетов",
