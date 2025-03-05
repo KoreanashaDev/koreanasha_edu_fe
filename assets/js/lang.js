@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         modal_label_additional_comments_title: "기타 문의나 의견",
                         modal_label_privacy_agreement_title: "개인정보 수집 및 이용에 동의합니다.",
                         modal_label_marketing_consent_title: "마케팅 활용 및 광고성 정보 수신 동의",
-                        modal_label_final_stage_title: "상담글이 성공적으로 등록되었습니다!",
+                        modal_label_final_stage_title: "신청 완료",
                         modal_label_final_stage_description: "답변이 등록되면 알림(텔레그램 또는 문자)을 드립니다.<br>Koreanasha는 오직 학생만을 위한 100% 맞춤형 컨설팅을 지원합니다.<br>감사합니다.",
                         modal_label_final_stage_btn: "확인",
 
