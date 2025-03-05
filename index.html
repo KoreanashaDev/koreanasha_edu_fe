@@ -1849,7 +1849,6 @@
                     desired_program: document.getElementById("desired_program").value,
                     admission_year: parseInt(document.getElementById("admission_year").value) + "년",
                     annual_budget: document.getElementById("annual_budget").value,
-                    desired_major: document.getElementById("desired_major").value.trim(),
                     desired_city: document.getElementById("desired_city").value.trim(),
                     post_graduation_plan: document.getElementById("post_graduation_plan").value.trim(),
                     contact_info: document.getElementById("contact_info").value.trim(),
@@ -1858,10 +1857,15 @@
                         : document.getElementById("referral_source").value,
                     additional_comments: document.getElementById("additional_comments").value.trim() || null,
                     marketing_consent: document.getElementById("marketing-consent").checked,
-                    balance_proof_10m: document.getElementById("balance_proof_10m")?.value === "yes" ? true : false,
-                    pay_4_semesters: document.getElementById("pay_4_semesters")?.value === "yes" ? true : false,
-                    balance_proof_20m: document.getElementById("balance_proof_20m")?.value === "yes" ? true : false
                 };
+
+                if (formData.desired_program === "языковые курсы(어학당)") {
+                    formData.balance_proof_10m = document.getElementById("balance_proof_10m")?.value === "yes";
+                    formData.pay_4_semesters = document.getElementById("pay_4_semesters")?.value === "yes";
+                } else {
+                    formData.desired_major = document.getElementById("desired_major").value.trim();
+                    formData.balance_proof_20m = document.getElementById("balance_proof_20m")?.value === "yes";
+                }
 
                 // ✅ Show loading state
                 Swal.fire({
